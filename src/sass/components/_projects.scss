@@ -1,0 +1,24 @@
+.projects {
+  height: 1000px;
+  background-color: $dark;
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+  padding-left: 3rem;
+  justify-content: center;
+  flex-direction: row;
+
+  &__container {
+    padding: 7rem;
+    display: flex;
+    justify-content: space-between;
+    color: $white;
+    background-color: aqua;
+
+    &__title {
+      font-size: 4rem;
+      font-weight: bold;
+      margin-bottom: 3rem;
+    }
+  }
+}
