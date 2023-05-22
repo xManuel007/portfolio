@@ -3,9 +3,10 @@
     position: relative;
 
     &__background {
-      width: 50rem;
+      width: 35rem;
       position: relative;
       overflow: hidden;
+      z-index: 1;
     }
 
     &__background__image {
@@ -25,8 +26,8 @@
     }
 
     &__image {
-      height: 23.5rem;
-      width: 37.5rem;
+      height: 16.5rem;
+      width: 26.5rem;
     }
   }
 }

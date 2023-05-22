@@ -1,5 +1,5 @@
 import React from 'react';
-import { laptopMockup } from '../../assets/mockups';
+import { laptopMockup } from '../../assets';
 
 const Laptop = ({ image }) => {
   return (

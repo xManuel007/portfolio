@@ -1,30 +1,16 @@
-import { FoodPoint } from "../../assets/mockups";
-import ProjectContainer from "../projectContainer";
+import React from 'react'
+import Laptop from '../Laptop'
 
-const Projects = () => {
+const ProjectContainer = ({title, resume, image, isVisible }) => {
   return (
-    <div id='projects' className='projects'>
-      <button className="projects__button projects__button--left">Anterior</button>
-      <div className="projects__container-wrapper">
-        <ProjectContainer
-          image={FoodPoint}
-          title={"Food Point"}
-          resume={"Explain"}
-        />
-        <ProjectContainer
-          image={FoodPoint}
-          title={"Food Point"}
-          resume={"Explain"}
-        />
-        <ProjectContainer
-          image={FoodPoint}
-          title={"Food Point"}
-          resume={"Explain"}
-        />
+    <div className={`projects__container ${isVisible ? "visible" : "hidden"}`}>
+      <Laptop image={image}/>
+      <div>
+        <div className='projects__container__title'>{title}</div>
+        <div className='projects__container__resume'>{resume}</div>
       </div>
-      <button className="projects__button projects__button--right">Siguiente</button>
     </div>
-  );
-};
+  )
+}
 
-export default Projects;
+export default ProjectContainer
