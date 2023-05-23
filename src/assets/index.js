@@ -3,7 +3,10 @@ import laptopMockup from './mockups/mockupMac.png'
 //projeects
 import FoodPoint from './projects/Foodpoint.png'
 import UDC from './projects/udc.png'
-import TakeMyDog from './projects/takemydog.jpg'
+import TakeMyDog from './projects/takemydog.png'
+import InteractivePong from './projects/pong.png'
+import RicardoYMartin from './projects/ricardoymartin.png'
+
 
 //contact
 import Github from './contact/icons8-github-50.png'
@@ -38,6 +41,8 @@ export {
   FoodPoint,
   UDC,
   TakeMyDog,
+  InteractivePong,
+  RicardoYMartin,
 
   //Contact
   Github,

@@ -7,6 +7,7 @@
       position: relative;
       overflow: hidden;
       z-index: 1;
+      top: 11rem;
     }
 
     &__background__image {
@@ -29,5 +30,10 @@
       height: 16.5rem;
       width: 26.5rem;
     }
+  }
+
+  &__phone {
+    width: 19rem;
+    height: auto;
   }
 }
