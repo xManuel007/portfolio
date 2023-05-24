@@ -58,7 +58,15 @@ const Projects = () => {
           image={TakeMyDog}
           title={"Take My Dog"}
           resume={`
-            This App is like an uber for dogs`}
+            Introducing a remarkable mobile app designed to simplify your search for dog walkers,
+            akin to the renowned Uber concept. With this user-friendly platform,
+            you can effortlessly find reliable dog walkers for your beloved canine companions.
+            The app offers a convenient feature that enables you to add your dogs,
+            providing essential details such as weight, personality traits,
+            and any special care requirements. For enhanced peace of mind,
+            you can even track the real-time position of the dog walker during the journey,
+            ensuring the utmost security for your cherished pets.
+            Experience a new level of convenience and safety in the world of dog walking with our innovative mobile app.`}
           isVisible={currentProject === 1}
           deviceType={'phone'}
           repo={'https://github.com/BC-MAY-21-RN/proyecto-final-pf-n21-t2'}
@@ -79,7 +87,10 @@ const Projects = () => {
         <ProjectContainer
           image={RicardoYMartin}
           title={"Rick & Morty"}
-          resume={"Explain"}
+          resume={`
+            Embrace the elegance of API consumption through a delightful array of functions,
+            including enchanting sorting capabilities, captivating search functionalities,
+            and an enchanting details screen that will leave you spellbound.`}
           isVisible={currentProject === 3}
           repo={'https://github.com/xManuel007/rick-morty-api'}
           technologies={[TypeScript, JavaScript, React, Git, CSS ]}
@@ -87,7 +98,14 @@ const Projects = () => {
         <ProjectContainer
           image={InteractivePong}
           title={"Interative Pong"}
-          resume={"Explain"}
+          resume={`
+            Presenting an extraordinary web app game,
+            It was a school project for the esteemed "Human-Computer Interaction" course.
+            Its core functionality lies in the mesmerizing art of
+            controlling the game's paddles with the graceful movement of your hands.
+            Harnessing the remarkable capabilities of the Mediapipe library,
+            this masterpiece detects and responds to the intricate gestures of your hand,
+            granting you boundless possibilities.`}
           isVisible={currentProject === 4}
           technologies={[JavaScript, Python, CSS, Git]}
           repo={'https://github.com/xManuel007/interative-pong'}

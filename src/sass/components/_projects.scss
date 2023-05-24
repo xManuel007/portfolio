@@ -36,7 +36,7 @@
   display: flex;
   justify-content: space-between;
   color: $white;
-  width: 70rem;
+  width: 80rem;
 
   &__title {
     font-size: 4rem;
@@ -54,7 +54,8 @@
   }
 
   &__resume {
-    text-justify: inter-ideograph;
+    text-align: justify;
+    font-size: 1.5rem;
   }
   &.visible {
     display: flex;

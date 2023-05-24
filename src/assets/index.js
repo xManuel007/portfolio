@@ -33,6 +33,7 @@ import TypeScript from './technologies/icons8-typescript-48.png'
 
 import Arrow from './arrow.png'
 
+import MySelf from './personal/me.jpg'
 export {
   //MockUps
   laptopMockup,
@@ -69,4 +70,5 @@ export {
 
   //Other
   Arrow,
+  MySelf
 }

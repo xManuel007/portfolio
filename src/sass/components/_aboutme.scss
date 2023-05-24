@@ -2,7 +2,90 @@
 .aboutme {
   &__container {
     background-color: $white;
-    height: 1280px;
+    height: 1000px;
     width: 100%;
+    padding: 5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
   }
+
+  &__resume {
+    height: 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  &__image {
+    height: 30rem;
+    width: auto;
+    border-radius: 50px;
+    box-shadow:  9px 9px 18px #a8a69b, -9px -9px 18px #ffffff;
+    transition: 0.5s;
+    &:hover {
+      box-shadow: none;
+    }
+  }
+}
+
+
+.button {
+  position: relative;
+  width: 30rem;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: 1px solid black;
+  background-color: #209978;
+  overflow: hidden;
+  justify-content: space-between;
+}
+
+.button, .button__icon, .button__text {
+  transition: all 0.3s;
+}
+
+.button .button__text {
+  transform: translateX(22px);
+  color: #fff;
+  font-weight: 600;
+}
+
+.button .button__icon {
+  position: absolute;
+  transform: translateX(109px);
+  height: 100%;
+  width: 39px;
+  background-color: #17795E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button .svg {
+  width: 20px;
+  fill: #fff;
+}
+
+.button:hover {
+  background: #17795E;
+}
+
+.button:hover .button__text {
+  color: transparent;
+}
+
+.button:hover .button__icon {
+  width: 148px;
+  transform: translateX(0);
+}
+
+.button:active .button__icon {
+  background-color: #146c54;
+}
+
+.button:active {
+  border: 1px solid #146c54;
 }

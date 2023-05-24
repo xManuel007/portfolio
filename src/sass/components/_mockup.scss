@@ -35,5 +35,9 @@
   &__phone {
     width: 19rem;
     height: auto;
+
+    &__container {
+      margin: 0 10rem 0 7rem;
+    }
   }
 }
