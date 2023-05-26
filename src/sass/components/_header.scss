@@ -11,6 +11,8 @@
     justify-content: space-between;
     z-index: 999;
 
+
+
   }
 
   &__name {
@@ -36,6 +38,8 @@
     justify-content: space-evenly;
     width: 50%;
 
+
+
     @include mobile {
       display: none;
       position: absolute;
@@ -50,6 +54,20 @@
         display: flex;
       }
     }
+
+    &__action {
+      transition: 0.5s;
+
+      &:hover {
+        opacity: 0.5;
+      }
+
+      &:focus {
+        opacity: 0.9;
+      }
+
+    }
+
   }
 
   &__menu-icon {

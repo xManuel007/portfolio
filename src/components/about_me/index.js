@@ -17,13 +17,10 @@ const AboutMe = () => {
             }}
             startDelay={100}
             cursorColor="#3F3D56"
-            multiText={[
-              'Hello World!!',
-              'Hello... It`s me.',
-              'こんにちは',
-              'Bonjour.',
-              'Hello There.',
-            ]}
+            multiText={[ "Hola mundo", "Hello world", "Bonjour le monde", "Hallo Welt", "Ciao mondo", "Olá mundo",
+              "Hej världen", "Kamusta mundo", "Merhaba dünya", "Hallo wereld", "Привет, мир", "你好，世界",
+              "여보세요 세상", "مرحبا بالعالم", "हैलो वर्ल्ड", "Γειά σου κόσμε", "Hei maailma", "שלום עולם",
+              "Halló heimur", "Sveika, pasaule", "Hello there...", "General Kenobi", "Hello World" ]}
             loop={true}
             nextTextDelay={1000}
             typeSpeed={30}

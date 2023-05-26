@@ -12,10 +12,10 @@ const Header = () => {
     <header className='header__container'>
       <HeaderAction itemClass='header__name' text='xManuel007' goTo='home' />
       <div className={`header__nav ${isMenuOpen ? 'header__nav--open' : ''}`}>
-        <HeaderAction itemClass='header__aboutme' text='About Me' goTo='home' />
-        <HeaderAction itemClass='header__projects' text='Projects' goTo='projects' />
-        <HeaderAction itemClass='header__projects' text='Road Map' goTo='roadmap' />
-        <HeaderAction itemClass='header__contacme' text='Contact' goTo='contact' />
+        <HeaderAction itemClass='header__nav__action' text='About Me' goTo='home' />
+        <HeaderAction itemClass='header__nav__action' text='Projects' goTo='projects' />
+        <HeaderAction itemClass='header__nav__action' text='Road Map' goTo='roadmap' />
+        <HeaderAction itemClass='header__nav__action' text='Contact' goTo='contact' />
       </div>
       <div className='header__menu-icon' onClick={toggleMenu}>
         <div className={`header__menu-icon__bar ${isMenuOpen ? 'header__menu-icon__bar--open' : ''}`}></div>

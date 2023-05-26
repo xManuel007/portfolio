@@ -3,6 +3,7 @@ $breakpoint-mobile-m: 375px;
 $breakpoint-mobile-l: 425px;
 
 $breakpoint-tablet: 768px;
+$breakpoint-laptop: 1024px;
 
 
 
@@ -27,6 +28,12 @@ $breakpoint-tablet: 768px;
 
 @mixin tablet {
   @media only screen and (min-width: $breakpoint-tablet) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media only screen and (min-width: $breakpoint-laptop) {
     @content;
   }
 }
