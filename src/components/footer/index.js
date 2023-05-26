@@ -3,8 +3,7 @@ import {
   Github,
   Instagram,
   Linkedin,
-  Whatsapp,
-  Youtube } from '../../assets'
+  Whatsapp } from '../../assets'
 
 const Footer = () => {
   return (
@@ -22,9 +21,9 @@ const Footer = () => {
         <a href='https://www.instagram.com/justrios_/' rel="noopener noreferrer" target="_blank">
           <img src={Instagram} alt='Instagram' className='footer__social_media'/>
         </a>
-        <a href='https://www.youtube.com/channel/UCsYEvVhtRECJpV_7lUpdnTQ' rel="noopener noreferrer" target="_blank">
+        {/* <a href='https://www.youtube.com/channel/UCsYEvVhtRECJpV_7lUpdnTQ' rel="noopener noreferrer" target="_blank">
           <img src={Youtube} alt='Youtube' className='footer__social_media'/>
-        </a>
+        </a> */}
       </div>
     </div>
   )

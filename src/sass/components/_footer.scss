@@ -1,9 +1,13 @@
 .footer {
-  height: 895px;
+  height: 100px;
   background-color: $dark;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @include mobile {
+    height: 200px;
+  }
 
   &__container {
     width: 80%;

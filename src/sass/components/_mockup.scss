@@ -8,6 +8,11 @@
       overflow: hidden;
       z-index: 1;
       top: 11rem;
+
+      @include mobile {
+        width: 18rem;
+        top: 0;
+      }
     }
 
     &__background__image {
@@ -24,11 +29,34 @@
       top: 45%;
       left: 48.5%;
       transform: translate(-50%, -50%);
+
+      @include mobile {
+        top: 45%;
+        left: 55%;
+      }
+
+      @include mobile_m{
+        left: 50%;
+      }
+
+      @include mobile_l{
+        left: 50%;
+      }
+
+      @include tablet {
+        left: 50%;
+      }
     }
 
     &__image {
       height: 16.5rem;
       width: 26.5rem;
+
+      @include mobile {
+        height: 8.9rem;
+        width: 14.5rem;
+      }
+
     }
   }
 
@@ -36,8 +64,16 @@
     width: 19rem;
     height: auto;
 
+    @include mobile {
+      width: 10rem;
+    }
+
     &__container {
       margin: 0 10rem 0 7rem;
+
+      @include mobile {
+        margin: 0;
+      }
     }
   }
 }

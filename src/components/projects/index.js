@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 
 const Projects = () => {
   const [currentProject, setCurrentProject] = useState(0);
-  const scrollDelay = 113000; // ms
+  const scrollDelay = 1115000; // ms
 
   const QuantityOfProjects = 5
 
@@ -38,7 +38,7 @@ const Projects = () => {
 
   return (
     <div id="projects" className="projects">
-      <img src={Arrow} alt="Previous" role="button" onClick={goToPreviousProject} className="projects__button__previous projects__button__arrow"/>
+
       <div className="projects__container">
         <ProjectContainer
           image={FoodPoint}
@@ -60,13 +60,7 @@ const Projects = () => {
           resume={`
             Introducing a remarkable mobile app designed to simplify your search for dog walkers,
             akin to the renowned Uber concept. With this user-friendly platform,
-            you can effortlessly find reliable dog walkers for your beloved canine companions.
-            The app offers a convenient feature that enables you to add your dogs,
-            providing essential details such as weight, personality traits,
-            and any special care requirements. For enhanced peace of mind,
-            you can even track the real-time position of the dog walker during the journey,
-            ensuring the utmost security for your cherished pets.
-            Experience a new level of convenience and safety in the world of dog walking with our innovative mobile app.`}
+            you can effortlessly find reliable dog walkers for your beloved canine companions.`}
           isVisible={currentProject === 1}
           deviceType={'phone'}
           repo={'https://github.com/BC-MAY-21-RN/proyecto-final-pf-n21-t2'}
@@ -111,7 +105,10 @@ const Projects = () => {
           repo={'https://github.com/xManuel007/interative-pong'}
         />
       </div>
-      <img src={Arrow} alt="Next" role="button" onClick={goToNextProject} className="projects__button__next projects__button__arrow"/>
+      <div className="projects__button__container">
+        <img src={Arrow} alt="Previous" role="button" onClick={goToPreviousProject} className="projects__button__previous projects__button__arrow"/>
+        <img src={Arrow} alt="Next" role="button" onClick={goToNextProject} className="projects__button__next projects__button__arrow"/>
+      </div>
     </div>
   );
 };
