@@ -37,9 +37,9 @@ const Projects = () => {
   };
 
   return (
-    <div id="projects" className="projects">
+    <div id="projects" className="bg-slate-600 h-screen flex flex-col lg:flex-row justify-center lg:justify-evenly p-2 items-center">
 
-      <div className="projects__container">
+      <div className="flex flex-row lg:flex-col justify-between lg:justify-center items-center">
         <ProjectContainer
           image={FoodPoint}
           title={"Food Point"}

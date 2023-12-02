@@ -5,7 +5,7 @@ const HeaderAction = ({ goTo, text, itemClass, isOpen }) => {
   return (
     <>
       <Link
-        className={itemClass}
+        className={`${itemClass}`}
         duration={500}
         offset={20}
         smooth={true}

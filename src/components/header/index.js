@@ -2,27 +2,49 @@ import React, { useState } from 'react';
 import HeaderAction from '../headerAction';
 
 const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsMenuOpen(prevState => !prevState);
-  };
+  const [menuVisible, setMenuVisible] = useState(false);
 
   return (
-    <header className='header__container'>
-      <HeaderAction itemClass='header__name' text='xManuel007' goTo='home' />
-      <div className={`header__nav ${isMenuOpen ? 'header__nav--open' : ''}`}>
-        <HeaderAction itemClass='header__nav__action' text='About Me' goTo='home' />
-        <HeaderAction itemClass='header__nav__action' text='Projects' goTo='projects' />
-        <HeaderAction itemClass='header__nav__action' text='Road Map' goTo='roadmap' />
-        <HeaderAction itemClass='header__nav__action' text='Contact' goTo='contact' />
+    <div className={`backdrop-blur-sm p-4 shadow-md fixed top-0 z-50 min-w-full
+      duration-500 lg:flexlg:
+      ${menuVisible ? 'h-48' : 'h-16'}`}>
+      <div className={`hidden lg:flex items-center justify-between w-full `}>
+        <div className='w-1/2'>
+          <HeaderAction itemClass='text-white text-2xl lg:text-3xl font-bold items-center flex' text='Manuel Rios' goTo='home' />
+        </div>
+        <div className='text-white text-xl justify-evenly flex w-1/2'>
+          <HeaderAction itemClass='hover:underline' text='About Me' goTo='home' />
+          <HeaderAction itemClass='hover:underline' text='Projects' goTo='projects' />
+          <HeaderAction itemClass='hover:underline' text='Road Map' goTo='roadmap' />
+          <HeaderAction itemClass='hover:underline' text='Contact' goTo='contact' />
+        </div>
       </div>
-      <div className='header__menu-icon' onClick={toggleMenu}>
-        <div className={`header__menu-icon__bar ${isMenuOpen ? 'header__menu-icon__bar--open' : ''}`}></div>
-        <div className={`header__menu-icon__bar ${isMenuOpen ? 'header__menu-icon__bar--open' : ''}`}></div>
-        <div className={`header__menu-icon__bar ${isMenuOpen ? 'header__menu-icon__bar--open' : ''}`}></div>
+
+      <div className='md:hidden w-fit'>
+        <div role='button' className='rotate-90 text-white text-2xl' onClick={() => setMenuVisible(!menuVisible)}>
+          III
+        </div>
+        <div
+          className={`fixed md:hidden z-50 w-full
+            animate-fade animate-duration-700
+            ${menuVisible ? '' : 'hidden'}`}>
+          <div
+            className={`md:block ${menuVisible ? 'translate-x-0' : ''} delay-500 duration-500 flex items-center justify-between`}
+          >
+            <ul className='flex flex-row items-start text-xl text-white  w-3/4 h-32 justify-between'>
+              <div className='flex flex-col h-full justify-evenly'>
+                <HeaderAction itemClass='' text='About Me' goTo='home' />
+                <HeaderAction itemClass='' text='Projects' goTo='projects' />
+              </div>
+              <div className='flex flex-col h-full justify-evenly'>
+                <HeaderAction itemClass='' text='Road Map' goTo='roadmap' />
+                <HeaderAction itemClass='' text='Contact' goTo='contact' />
+              </div>
+            </ul>
+          </div>
+        </div>
       </div>
-    </header>
+    </div>
   );
 };
 

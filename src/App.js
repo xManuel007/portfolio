@@ -1,18 +1,21 @@
 import './sass/application.scss';
-import Header from './components/header';
 import AboutMe from './components/about_me';
 import Projects from './components/projects';
 import RoadMap from './components/roadmap';
-import Footer from './components/footer';
+import HeroComponent from './components/hero';
+import Layout from './components/layout';
+import Resume from './components/resume';
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <AboutMe />
-      <Projects />
-      <RoadMap />
-      <Footer />
+      <Layout>
+        <HeroComponent />
+        <Resume />
+        <AboutMe />
+        <Projects />
+        <RoadMap />
+      </Layout>
     </div>
   );
 }

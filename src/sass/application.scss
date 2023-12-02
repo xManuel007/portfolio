@@ -7,13 +7,16 @@
 @import './abstracts/variables';
 
 @import './components/header';
-@import './components/aboutme';
 @import './components/projects';
 @import './components/roadmap';
-@import './components/footer';
 @import './components/mockup';
+@import './components/cardLogo';
 
 
 @import './layouts/App.scss';
 
 @import './utils/colors';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
