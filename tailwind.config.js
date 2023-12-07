@@ -18,6 +18,10 @@ module.exports = {
         'blackhole-background': "url('/src/assets/design/blackhole.jpg')",
         'cosmos-background': "url('/src/assets/design/cosmos.jpg')",
         'waves-background': "url('/src/assets/design/waves.jpg')",
+      },
+      boxShadow: {
+        custom: '6px 6px 12px #0c1820, -6px -6px 12px #1e384c',
+        customHover: '8px 8px 24px #0c1820, -8px -8px 24px #1e384c'
       }
     },
   },

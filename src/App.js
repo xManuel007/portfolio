@@ -1,10 +1,10 @@
 import './sass/application.scss';
 import AboutMe from './components/about_me';
-import Projects from './components/projects';
-import RoadMap from './components/roadmap';
-import HeroComponent from './components/hero';
-import Layout from './components/layout';
-import Resume from './components/resume';
+import RoadMap from './parts/roadmap';
+import HeroComponent from './parts/hero';
+import Layout from './parts/layout';
+import Resume from './parts/resume';
+import Works from './parts/works';
 
 function App() {
   return (
@@ -12,8 +12,8 @@ function App() {
       <Layout>
         <HeroComponent />
         <Resume />
-        <AboutMe />
-        <Projects />
+        {/* <AboutMe /> */}
+        <Works />
         <RoadMap />
       </Layout>
     </div>

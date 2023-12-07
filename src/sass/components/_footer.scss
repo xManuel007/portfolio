@@ -1,0 +1,8 @@
+.footer {
+  &__social_media {
+    transition: 0.5s;
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}
