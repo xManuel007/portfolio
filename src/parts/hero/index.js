@@ -1,5 +1,5 @@
 import React from 'react'
-import { LogoMR } from '../../assets'
+import { LogoMR } from '../../assets/logo'
 
 const HeroComponent = () => {
   return (

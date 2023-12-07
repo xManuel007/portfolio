@@ -1,5 +1,4 @@
 import './sass/application.scss';
-import AboutMe from './components/about_me';
 import RoadMap from './parts/roadmap';
 import HeroComponent from './parts/hero';
 import Layout from './parts/layout';
@@ -12,7 +11,6 @@ function App() {
       <Layout>
         <HeroComponent />
         <Resume />
-        {/* <AboutMe /> */}
         <Works />
         <RoadMap />
       </Layout>

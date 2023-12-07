@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
+import React from 'react';
 import TitleBody from '../../components/title';
 import projectsData from '../../local-api/projects';
-import { useRef, useEffect } from 'react';
-import { register } from 'swiper/element/bundle';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
-register()
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/effect-cards';
+
+import { EffectCards, Autoplay } from 'swiper/modules';
+
 
 const Works = () => {
-  const swiperElRef = useRef(null);
-
-
-
   return (
     <div id='projects' className='bg-navy bg-no-repeat bg-cover max-h-max min-h-screen w-screen flex flex-col relative'>
       <TitleBody
@@ -19,29 +19,29 @@ const Works = () => {
         secondphrase='PORTFOLIO'
       />
     <div className='h-full'>
-      <swiper-container
-        ref={swiperElRef}
-        slides-per-view="1"
-        pagination="true"
-        autoplay="true"
-        delay="2500"
-        speed="2000"
-        loop="true"
+    <Swiper
+        effect={'cards'}
+        grabCursor={true}
+        modules={[EffectCards, Autoplay]}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        className="mySwiper w-72 h-96 flex justify-center items-center"
       >
         {projectsData.projects.map((project, index) => (
-          <swiper-slide key={index}>
-            <div className='p-16 flex flex-col lg:flex-row items-center justify-center h-full'>
-              <img src={project.image} alt='project' className='lg:w-1/2 w-full h-full'/>
-              <div className='flex flex-col justify-between items-center lg:p-32 lg:w-1/2 text-justify lg:text-xl'>
-                <div className='text-white lg:h-1/2'>{project.resume}</div>
-                <div>
-                  <button className='text-white w-fit rounded bg-blue-500 hover:bg-blue-300 hover:text-black px-4 py-2'>More info</button>
-                </div>
-              </div>
+          <SwiperSlide
+            key={index}
+            className='rounded-xl bg-fronttext w-72 h-96 p-8'
+          >
+            <div className='font-extrabold text-2xl drop-shadow-md mb-8'>
+              {project.title}
             </div>
-          </swiper-slide>
+            <div className='flex justify-center'><img src={project.image} alt='project' className='w-auto h-48 drop-shadow-xl'/></div>
+            <div className='bg-backtext hover:bg-blue-400 w-fit px-4 py-2 mt-4 rounded-md text-white hover:text-black font-bold duration-300'>More info</div>
+          </SwiperSlide>
         ))}
-      </swiper-container>
+      </Swiper>
     </div>
     </div>
   );

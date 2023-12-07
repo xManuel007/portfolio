@@ -1,11 +1,10 @@
-import laptopMockup from './mockups/mockupMac.png'
-
 //projeects
 import FoodPoint from './projects/Foodpoint.png'
 import UDC from './projects/udc.png'
 import TakeMyDog from './projects/takemydog.png'
 import InteractivePong from './projects/pong.png'
 import RicardoYMartin from './projects/ricardoymartin.png'
+import Glicorsa from './projects/Glicorsa.png'
 
 
 //contact
@@ -31,21 +30,15 @@ import RoR from './technologies/icons8-ruby-programming-language-48.png'
 import Sass from './technologies/icons8-sass-48.png'
 import TypeScript from './technologies/icons8-typescript-48.png'
 
-import Arrow from './arrow.png'
 
-import LogoMR from './logo/MR.svg'
-
-import MySelf from './personal/me.jpg'
 export {
-  //MockUps
-  laptopMockup,
-
   //Projects
   FoodPoint,
   UDC,
   TakeMyDog,
   InteractivePong,
   RicardoYMartin,
+  Glicorsa,
 
   //Contact
   Github,
@@ -70,9 +63,4 @@ export {
   Sass,
   TypeScript,
 
-  //Other
-  Arrow,
-  MySelf,
-
-  LogoMR,
 }
