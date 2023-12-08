@@ -5,7 +5,7 @@ import TimelineEvent from '../../components/timelineEvent'
 
 const TimeLine = () => {
   return (
-    <div id='roadmap' className='w-screen  bg-navy lg:px-72 p-8'>
+    <div id='roadmap' className='w-screen bg-navy lg:px-72 p-8'>
       <TitleBody
         backtext='ROADMAP'
         firstphrase={'TIMELINE'}

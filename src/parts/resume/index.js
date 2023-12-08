@@ -30,7 +30,7 @@ const Card = ({ number, field, aos }) => {
 
 const Resume = () => {
   return (
-    <div id='home' className='bg-navy bg-no-repeat bg-cover max-h-max min-h-screen flex flex-col relative'>
+    <div id='home' className='bg-navy w-screen max-h-max min-h-screen flex flex-col'>
       <TitleBody
         backtext='RESUME'
         firstphrase='ABOUT'

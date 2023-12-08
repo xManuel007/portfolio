@@ -5,8 +5,8 @@ const Header = () => {
   const [menuVisible, setMenuVisible] = useState(false);
 
   return (
-    <div className={`backdrop-blur-sm p-4 shadow-md fixed top-0 z-50 min-w-full
-      duration-500 lg:flexlg:
+    <div className={`backdrop-blur-sm p-4 shadow-md fixed top-0 z-50 w-screen
+      duration-500 lg:flex
       ${menuVisible ? 'h-48' : 'h-16'}`}>
       <div className={`hidden lg:flex items-center justify-between w-full `}>
         <div className='w-1/2'>
