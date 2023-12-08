@@ -13,9 +13,9 @@ const Header = () => {
           <HeaderAction itemClass='text-white text-2xl lg:text-3xl font-bold items-center flex' text='Manuel Rios' goTo='home' />
         </div>
         <div className='text-white text-xl justify-evenly flex w-1/2'>
-          <HeaderAction itemClass='hover:underline' text='About Me' goTo='home' />
-          <HeaderAction itemClass='hover:underline' text='Projects' goTo='projects' />
-          <HeaderAction itemClass='hover:underline' text='Road Map' goTo='roadmap' />
+          <HeaderAction itemClass='hover:underline' text='Resume' goTo='home' />
+          <HeaderAction itemClass='hover:underline' text='Works' goTo='projects' />
+          <HeaderAction itemClass='hover:underline' text='Roadmap' goTo='roadmap' />
           <HeaderAction itemClass='hover:underline' text='Contact' goTo='contact' />
         </div>
       </div>
@@ -33,11 +33,11 @@ const Header = () => {
           >
             <ul className='flex flex-row items-start text-xl text-white  w-3/4 h-32 justify-between'>
               <div className='flex flex-col h-full justify-evenly'>
-                <HeaderAction itemClass='' text='About Me' goTo='home' />
-                <HeaderAction itemClass='' text='Projects' goTo='projects' />
+                <HeaderAction itemClass='' text='Resume' goTo='home' />
+                <HeaderAction itemClass='' text='Works' goTo='projects' />
               </div>
               <div className='flex flex-col h-full justify-evenly'>
-                <HeaderAction itemClass='' text='Road Map' goTo='roadmap' />
+                <HeaderAction itemClass='' text='Roadmap' goTo='roadmap' />
                 <HeaderAction itemClass='' text='Contact' goTo='contact' />
               </div>
             </ul>

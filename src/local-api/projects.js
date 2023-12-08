@@ -31,6 +31,7 @@ const projectsData = {
       "title": "Universidad De Colima",
       "resume": "I Developed a modern and dynamic user interfaces using React JS, while implementing best practices such as test-driven development and utilizing tools for managing local and remote repositories. for this project I don't have repo because its confidential.",
       "isVisible": false,
+      "repo": "https://www.ucol.mx/",
       "technologies": ["JavaScript", "React", "Sass", "NodeJS", "Git"]
     },    {
       "image": PortfolioLogo,

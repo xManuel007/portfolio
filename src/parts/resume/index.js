@@ -4,15 +4,15 @@ import PercentageCircle from '../../components/percentajecircle';
 import ButtonCV from '../../components/buttonCV';
 
 const InfoItem = ({ label, value }) => (
-  <div className='flex mb-2'>
+  <div data-aos='fade-right' className='flex mb-2'>
     <span className='text-lg text-slate-400'>{label}:</span>
     <span className='text-lg text-slate-200 ml-2'>{value}</span>
   </div>
 );
 
-const Card = ({ number, field }) => {
+const Card = ({ number, field, aos }) => {
   return (
-    <div className='w-36 h-36 lg:w-48 border-2 border-fronttext border-dashed rounded-lg p-4 relative m-5'>
+    <div data-aos={aos} className='w-36 h-36 lg:w-48 border-2 border-fronttext border-dashed rounded-lg p-4 relative m-5'>
       <div className='absolute top-2 left-4'>
         <span className='text-4xl text-fronttext font-bold'>{number}</span>
         <span className='text-xl text-fronttext'>+</span>
@@ -58,9 +58,9 @@ const Resume = () => {
         </div>
 
         <div className='lg:w-1/2 grid grid-cols-2 justify-center lg:justify-between items-center lg:items-start p-4'>
-          <Card number={'2'} field={'YEARS OF EXPERIENCE'}></Card>
-          <Card number={'5'} field={'COMPLETED PROJECTS'}></Card>
-          <Card number={'1'} field={'HAPPY CUSTOMERS'}></Card>
+          <Card aos={'fade-down-right'} number={'2'} field={'YEARS OF EXPERIENCE'}></Card>
+          <Card aos={'fade-down-left'} number={'5'} field={'COMPLETED PROJECTS'}></Card>
+          <Card aos={'fade-up-right'} number={'1'} field={'HAPPY CUSTOMERS'}></Card>
         </div>
       </div>
 

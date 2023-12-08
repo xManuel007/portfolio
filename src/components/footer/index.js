@@ -7,7 +7,7 @@ import {
 
 const Footer = () => {
   return (
-    <div id='contact' className='h-64 lg:h-32 w-full flex items-center justify-center bg-slate-800'>
+    <div id='contact' className='h-64 lg:h-32 w-full flex items-center justify-center bg-navy'>
       <div className='flex w-3/4 justify-evenly'>
         <a href='https://github.com/xManuel007' rel="noopener noreferrer" target="_blank">
           <img src={Github} alt='Github' className='hover:animate-pulse duration-500'/>

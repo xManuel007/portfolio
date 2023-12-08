@@ -33,7 +33,7 @@ const PercentageCircle = ({ percent, skill }) => {
   }, [circumference, targetOffset]);
 
   return (
-    <div className='flex flex-col'>
+    <div className='flex flex-col' data-aos='fade-down'>
       <svg height="100" width="100">
         {/* Círculo exterior */}
         <circle
