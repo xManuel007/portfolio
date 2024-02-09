@@ -12,7 +12,23 @@ const TimeLine = () => {
         secondphrase={'LIFE'}
       />
 
+      <TimelineContainer year={2024}>
+        <TimelineEvent
+          verb={'finished an'}
+          experience={'Fullstack web project'}
+          place={'Glicorsa'}
+          additional={'I made an web page about a big company, glicorsa.com'}
+          settings={'Public'}
+        />
+      </TimelineContainer>
       <TimelineContainer year={2023}>
+        <TimelineEvent
+          verb={'start working as'}
+          experience={'FullStack'}
+          place={'Glicorsa'}
+          additional={'Just started as a Freelancer, and starting a new project'}
+          settings={'Public'}
+        />
         <TimelineEvent
           verb={'finished an'}
           experience={'Engineering'}

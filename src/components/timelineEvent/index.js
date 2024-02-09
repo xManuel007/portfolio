@@ -4,7 +4,7 @@ import { LogoMR } from '../../assets/logo';
 const TimelineEvent = ({ verb, experience, place, additional, settings }) => {
   return (
     <li className="mb-4">
-      <div className="flex items-center sm:block p-3 hover:bg-gray-100 dark:hover:bg-gray-700">
+      <div className="flex items-center sm:block p-3 hover:bg-gray-100 duration-500 dark:hover:bg-gray-700">
         <img
           className="w-12 h-12 mb-3 me-3 rounded-full sm:mb-0"
           src={LogoMR}

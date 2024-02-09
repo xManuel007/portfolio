@@ -7,8 +7,8 @@ const projectsData = {
       "title": "Glicorsa",
       "resume": "A great company to buy your liquors and also bottleling service",
       "isVisible": true,
-      "repo": "none",
-      "technologies": ["React", "18inext", "Tailwind", "Git"]
+      "repo": "www.glicorsa.com",
+      "technologies": ["React", "18inext", "Tailwind", "Git", 'Router', 'EmailJS']
     },
     {
       "image": FoodPointLogo,

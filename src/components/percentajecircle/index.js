@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { motion } from "framer-motion";
 
 const PercentageCircle = ({ percent, skill }) => {
   const radius = 45;
@@ -33,7 +34,14 @@ const PercentageCircle = ({ percent, skill }) => {
   }, [circumference, targetOffset]);
 
   return (
-    <div className='flex flex-col' data-aos='fade-down'>
+    <motion.div
+      initial={{ opacity: 0, y: '20%' }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{
+        duration: 1,
+        ease: 'easeInOut',
+      }}
+      className='flex flex-col'>
       <svg height="100" width="100">
         {/* Círculo exterior */}
         <circle
@@ -63,7 +71,7 @@ const PercentageCircle = ({ percent, skill }) => {
       <div className='text-fronttext'>
         {skill}
       </div>
-    </div>
+    </motion.div>
   );
 };
 
