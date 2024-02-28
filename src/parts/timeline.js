@@ -1,7 +1,7 @@
 import React from 'react'
-import TitleBody from '../../components/title'
-import TimelineContainer from '../../components/timelineContainer'
-import TimelineEvent from '../../components/timelineEvent'
+import TitleBody from '../components/ui/title-part'
+import TimelineContainer from '../components/timeline'
+import TimelineEvent from '../components/timeline/timeline-event'
 
 const TimeLine = () => {
   return (

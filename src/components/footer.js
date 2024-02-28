@@ -3,7 +3,7 @@ import {
   Github,
   Instagram,
   Linkedin,
-  Whatsapp } from '../../assets'
+  Whatsapp } from '../assets'
 
 const Footer = () => {
   return (

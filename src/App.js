@@ -1,5 +1,5 @@
-import './sass/application.scss';
-import HeroComponent from './parts/hero';
+import './global.scss';
+import Hero from './parts/hero';
 import Layout from './parts/layout';
 import Resume from './parts/resume';
 import Works from './parts/works';
@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
       <Layout>
-        <HeroComponent />
+        <Hero />
         <Resume />
         <Works />
         <TimeLine />

@@ -1,9 +1,9 @@
 import React from 'react'
-import CVManu from '../../assets/personal/CVManuelRios.pdf'
+// import CVManu from '../../assets/personal/CV-28022024.pdf'
 
 const ButtonCV = () => {
   return (
-    <a href={CVManu} rel="noopener noreferrer" target="_blank">
+    <a href='/' rel="noopener noreferrer" target="_blank">
       <button
       className="overflow-hidden relative w-46 p-4 flex text-center items-center h-12 bg-black text-white border-none rounded-md text-lg font-bold cursor-pointer z-10 group"
       >

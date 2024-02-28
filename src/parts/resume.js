@@ -1,8 +1,8 @@
 import React from 'react';
-import TitleBody from '../../components/title';
-import PercentageCircle from '../../components/percentajecircle';
-import ButtonCV from '../../components/buttonCV';
+import TitleBody from '../components/ui/title-part';
+import PercentageCircle from '../components/ui/percentage-circle';
 import { motion } from "framer-motion";
+import ButtonCV from '../components/button-cv';
 
 const InfoItem = ({ label, value, className }) => (
   <motion.div
