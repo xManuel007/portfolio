@@ -5,7 +5,9 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-cards';
 import { EffectCards, Autoplay } from 'swiper/modules';
-import { Plus, X } from 'lucide-react'
+import { Plus } from 'lucide-react'
+import Modal from '../components/ui/modal';
+
 
 
 const Works = () => {
@@ -52,11 +54,12 @@ const Works = () => {
             <SwiperSlide
               key={index}
               className='rounded-md bg-fronttext h-full w-full p-8 flex'
+              onClick={() => openModal(project)}
             >
               <div
-                className='cursor-pointer absolute bottom-2 right-4 text-2xl bg-slate-200 aspect-square p-1 rounded-sm hover:bg-slate-400 duration-200'
+                className='cursor-pointer absolute bottom-2 right-4 text-2xl aspect-square p-1 hover:opacity-60 duration-200'
               >
-                <Plus onClick={() => openModal(project)} className='w-5 h-5' />
+                <Plus onClick={() => openModal(project)} className='w-6 h-6' />
               </div>
               <div className='font-extrabold text-xl lg:text-2xl drop-shadow-md h-1/6'>
                 {project.title}
@@ -64,7 +67,7 @@ const Works = () => {
               <div className='flex justify-center items-center h-5/6 w-full'>
                 <div className='flex justify-center items-center h-full w-full'>
                   <img
-                    src={project.image}
+                    src={project.image[0]}
                     alt='project'
                     className='w-auto h-3/4 drop-shadow-xl'
                   />
@@ -75,38 +78,7 @@ const Works = () => {
         </Swiper>
       </div>
 
-      {selectedProject && (
-        <div className='fixed top-0 left-0 w-screen h-screen flex items-center justify-center z-50 backdrop-blur-sm'>
-          <div className='absolute w-5/6 h-4/6 bg-white p-8 rounded-md flex flex-col lg:flex-row gap-4'>
-            <div
-              className='cursor-pointer absolute top-4 right-4 text-2xl'
-              onClick={closeModal}
-            >
-              <X className='w-4 h-4 hover:opacity-50 duration-200'/>
-            </div>
-
-            <div className='w-full lg:w-1/2 h-1/2 lg:h-full border border-slate-400 rounded-md items-center justify-center flex p-4'>
-              <img src={selectedProject.image} alt='project' className='h-full w-auto' />
-            </div>
-
-            <div className='flex flex-col w-full lg:w-1/2 h-1/2 lg:h-full text-justify gap-8'>
-              <div className='font-extrabold text-2xl'>
-                {selectedProject.title}
-              </div>
-              <div className='flex flex-col gap-4 items-center justify-between lg:min-h-5/6 overflow-hidden overflow-y-auto'>
-                <p>{selectedProject.resume}</p>
-                <a
-                  href={`https://${selectedProject.repo}`}
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  className='bg-slate-500 rounded-sm p-2 px-5 text-white w-fit'
-                >Visit</a>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      )}
+      {selectedProject && (<Modal project={selectedProject} closeModal={closeModal} />)}
     </div>
   );
 };

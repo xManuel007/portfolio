@@ -3,8 +3,11 @@ import FoodPoint from './projects/Foodpoint.png'
 import UDC from './projects/udc.png'
 import TakeMyDog from './projects/takemydog.png'
 import InteractivePong from './projects/pong.png'
+import InteractivePongGif from './projects/PongWithHands.gif'
 import RicardoYMartin from './projects/ricardoymartin.png'
 import Glicorsa from './projects/Glicorsa.png'
+import Glicorsa2 from './projects/glicorsa2.png'
+import Portfolio from './projects/portafolio.png'
 
 
 //contact
@@ -29,6 +32,9 @@ import React from './technologies/icons8-react-16.png'
 import RoR from './technologies/icons8-ruby-programming-language-48.png'
 import Sass from './technologies/icons8-sass-48.png'
 import TypeScript from './technologies/icons8-typescript-48.png'
+import Tailwind from './technologies/icons8-tailwind-css-48.png'
+import I18Next from './technologies/i18next.png'
+import EmailJS from './technologies/emailjs.png'
 
 
 export {
@@ -37,8 +43,11 @@ export {
   UDC,
   TakeMyDog,
   InteractivePong,
+  InteractivePongGif,
   RicardoYMartin,
   Glicorsa,
+  Glicorsa2,
+  Portfolio,
 
   //Contact
   Github,
@@ -62,5 +71,8 @@ export {
   RoR,
   Sass,
   TypeScript,
+  EmailJS,
+  I18Next,
+  Tailwind
 
 }
