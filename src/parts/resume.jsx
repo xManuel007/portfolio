@@ -63,7 +63,7 @@ const Resume = () => {
             <InfoItem label='Freelance' value='Available' />
             <InfoItem label='Address' value='Colima, Mx' />
             <InfoItem className={'hover:text-slate-500 duration-200'} label='Phone' value={<a href='https://api.whatsapp.com/send?phone=3141249893'>+52 3141249893</a>} />
-            <InfoItem label='Email' value='maanuu.009@gmail.com' />
+            <InfoItem label='Email' value='xmanuelrios@gmail.com' />
             <InfoItem label='Languages' value='Spanish, English' />
             <InfoItem className={'hover:text-slate-500 duration-200'} label='Github' value={<a href='https://github.com/xManuel007'>xManuel007</a>} />
           </div>
