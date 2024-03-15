@@ -14,8 +14,8 @@ const icon = {
 
 const Hero = () => {
   return (
-    <div className='bg-waves-background bg-no-repeat bg-cover bg-fixed h-screen flex flex-col items-center justify-center'>
-      <div className='backdrop-blur-md shadow-md w-64 h-64 lg:w-96 lg:h-96 rounded-3xl flex items-center justify-center border-slate-400 border-2 mb-4'>
+    <div id='hero' className='bg-waves-background bg-no-repeat bg-center bg-cover xl:bg-fixed h-screen flex flex-col items-center justify-center'>
+      <div className='backdrop-blur-md w-64 h-64 lg:w-96 lg:h-96 rounded-3xl flex items-center justify-center shadow-md mb-4'>
         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0.00 0.00 500.00 500.00" width="500.00" height="500.00">
           <motion.path
             variants={icon}
@@ -165,7 +165,7 @@ const Hero = () => {
       </div>
       <div className='flex flex-col'>
         <div className='font-bold text-5xl lg:text-9xl text-white shadow-md'>Manuel Rios</div>
-        <div className='font-medium text-3xl lg:text-5xl text-white shadow-md'>Web developer</div>
+        <div className='font-medium text-3xl lg:text-5xl text-white shadow-md'>Full Stack Developer</div>
       </div>
     </div>
   )

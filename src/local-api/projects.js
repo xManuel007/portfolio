@@ -23,7 +23,7 @@ const projectsData = {
         FoodPoint
       ],
       "title": "Food Point",
-      "resume": "Food Point is a restaurant point of sale application. It consists of different modules with a user-friendly interface. Some of the features it includes are the Services functionality, where orders are generated based on the items registered. The Kitchen module allows users to view the registered orders and update their status. Reports functionality helps to keep track of sales.",
+      "resume": "Food Point is a point of sale application for restaurants. It consists of different modules with an easy-to-use interface. Some of the features they include are the ability to manage orders, where orders are generated based on registered items. The Kitchen module allows users to view registered orders and update their status. Reporting functionality helps track sales",
       "isVisible": true,
       "repo": "github.com/BrightCoders-Institute/BCDIC22-RoR-proyecto-final-team3",
       "technologies": [RoR, Postgresql, CSS, Git]

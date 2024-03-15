@@ -45,10 +45,10 @@ const Works = () => {
           grabCursor={true}
           modules={[EffectCards, Autoplay]}
           autoplay={{
-            delay: 20500,
+            delay: 2500,
             disableOnInteraction: false,
           }}
-          className='mySwiper lg:w-72 lg:h-96 w-52 h-80 flex justify-center items-center mt-16'
+          className='mySwiper lg:w-96 lg:h-96 w-52 h-80 flex justify-center items-center mt-16'
         >
           {projectsData.projects.map((project, index) => (
             <SwiperSlide

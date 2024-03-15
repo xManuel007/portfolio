@@ -1,47 +1,10 @@
 import React from 'react';
 import TitleBody from '../components/ui/title-part';
 import PercentageCircle from '../components/ui/percentage-circle';
-import { motion } from "framer-motion";
-import ButtonCV from '../components/button-cv';
-
-const InfoItem = ({ label, value, className }) => (
-  <motion.div
-    initial={{ opacity: 0, x: '-20%' }}
-    whileInView={{ opacity: 1, x: 0 }}
-    transition={{
-      duration: 1,
-      ease: 'easeInOut',
-    }}
-    className=' flex mb-2 gap-2'>
-    <span className='text-lg text-slate-400'>{label}:</span>
-    <span className={`${className} text-lg text-slate-200`}>{value}</span>
-  </motion.div>
-);
-
-const Card = ({ number, field, className }) => {
-  return (
-    <motion.div
-      initial={{ opacity: 0, x: '-20%' }}
-      whileInView={{ opacity: 1, x: 0 }}
-      transition={{
-        duration: 1,
-        ease: 'easeInOut',
-      }}
-      className='w-36 h-36 lg:w-48 border-2 border-fronttext border-dashed rounded-lg p-4 relative m-5'>
-      <div className='absolute top-2 left-4'>
-        <span className='text-4xl text-fronttext font-bold'>{number}</span>
-        <span className='text-xl text-fronttext'>+</span>
-      </div>
-      <div className='grid grid-cols-2 gap-4 text-justify'>
-        <span className='text-4xl text-fronttext font-bold'>__</span>
-      </div>
-      <div>
-        <span className='text-sm text-white text-start flex'>{field}</span>
-      </div>
-    </motion.div>
-  );
-};
-
+import ButtonCV from '../components/button-cv'
+import InfoItem from '../components/ui/into-item';
+import Card from '../components/ui/card';
+import Presentation from '../components/presentation';
 
 const Resume = () => {
   return (
@@ -51,6 +14,8 @@ const Resume = () => {
         firstphrase='ABOUT'
         secondphrase='ME'
       />
+
+      <Presentation />
 
       <div className='flex flex-col lg:flex-row justify-evenly w-full'>
         <div className='flex flex-col p-4 w-full items-start'>
@@ -62,10 +27,10 @@ const Resume = () => {
             <InfoItem label='Nationality' value='Mexican' />
             <InfoItem label='Freelance' value='Available' />
             <InfoItem label='Address' value='Colima, Mx' />
-            <InfoItem className={'hover:text-slate-500 duration-200'} label='Phone' value={<a href='https://api.whatsapp.com/send?phone=3141249893'>+52 3141249893</a>} />
+            <InfoItem label='Phone' isExternaLink='https://api.whatsapp.com/send?phone=3141249893' value='+52 3141249893' />
             <InfoItem label='Email' value='xmanuelrios@gmail.com' />
             <InfoItem label='Languages' value='Spanish, English' />
-            <InfoItem className={'hover:text-slate-500 duration-200'} label='Github' value={<a href='https://github.com/xManuel007'>xManuel007</a>} />
+            <InfoItem label='Github' isExternaLink='https://github.com/xManuel007' value='xManuel007' />
           </div>
           <div className='mt-4'>
             <ButtonCV />
@@ -73,9 +38,9 @@ const Resume = () => {
         </div>
 
         <div className='lg:w-1/2 grid grid-cols-2 justify-center lg:justify-between items-center lg:items-start p-4'>
-          <Card number={'2'} field={'YEARS OF EXPERIENCE'}></Card>
-          <Card number={'5'} field={'COMPLETED PROJECTS'}></Card>
-          <Card number={'1'} field={'HAPPY CUSTOMERS'}></Card>
+          <Card number={2} field={'YEARS OF EXPERIENCE'}></Card>
+          <Card number={5} field={'COMPLETED PROJECTS'}></Card>
+          <Card number={1} field={'HAPPY CUSTOMERS'}></Card>
         </div>
       </div>
 
@@ -84,9 +49,11 @@ const Resume = () => {
         <div className='grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-x-40'>
           <PercentageCircle percent={90} skill={'Git'} />
           <PercentageCircle percent={70} skill={'JavaScript'} />
-          <PercentageCircle percent={40} skill={'TypeScript'} />
+          <PercentageCircle percent={60} skill={'TypeScript'} />
           <PercentageCircle percent={80} skill={'React JS'} />
+          <PercentageCircle percent={80} skill={'Next JS'} />
           <PercentageCircle percent={80} skill={'CSS'} />
+          <PercentageCircle percent={80} skill={'Tawilwind'} />
           <PercentageCircle percent={60} skill={'Ruby On Rails'} />
           <PercentageCircle percent={60} skill={'Python'} />
           <PercentageCircle percent={80} skill={'DataBases'} />

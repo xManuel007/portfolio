@@ -36,6 +36,8 @@ import Tailwind from './technologies/icons8-tailwind-css-48.png'
 import I18Next from './technologies/i18next.png'
 import EmailJS from './technologies/emailjs.png'
 
+import MySelft from './personal/yo.jpg'
+
 
 export {
   //Projects
@@ -73,6 +75,7 @@ export {
   TypeScript,
   EmailJS,
   I18Next,
-  Tailwind
+  Tailwind,
 
+  MySelft
 }

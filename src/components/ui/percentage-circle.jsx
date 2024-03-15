@@ -1,73 +1,44 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from "framer-motion";
+import React, { useState, useEffect, useRef } from 'react';
+import { motion, useInView, useAnimation } from "framer-motion";
+import { CircularProgressbar } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
 
 const PercentageCircle = ({ percent, skill }) => {
-  const radius = 45;
-  const circumference = 2 * Math.PI * radius;
-  const startAngle = -Math.PI / 2;
-  const targetOffset = circumference - (percent / 100) * circumference;
+  const [filledPercent, setFilledPercent] = useState(0);
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true })
+  const mainControls = useAnimation()
 
-  // Utilizamos el estado para controlar el valor de strokeDashoffset
-  const [strokeDashoffset, setStrokeDashoffset] = useState(circumference);
-
-  // Utilizamos useEffect para iniciar la animación al montar el componente
   useEffect(() => {
-    const animationDuration = 1000; // Duración de la animación en milisegundos
-    let startTime;
+    if(isInView) {
+      mainControls.start('visible')
 
-    const animate = (time) => {
-      if (!startTime) startTime = time;
-      const progress = Math.min((time - startTime) / animationDuration, 1);
-      const currentOffset = circumference * (1 - progress) + targetOffset;
+      const fillInterval = setInterval(() => {
+        if (filledPercent < percent) {
+          setFilledPercent(prevPercent => prevPercent + 1);
+        } else {
+          clearInterval(fillInterval);
+        }
+      }, 10); // Adjust the interval duration as needed for smoother or faster filling
 
-      setStrokeDashoffset(currentOffset);
-
-      if (progress < 1) {
-        requestAnimationFrame(animate);
-      }
-    };
-
-    requestAnimationFrame(animate);
-
-    // Limpia el temporizador cuando el componente se desmonta
-    return () => cancelAnimationFrame(animate);
-  }, [circumference, targetOffset]);
+      return () => clearInterval(fillInterval);
+    }
+  }, [percent, filledPercent, isInView, mainControls]);
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: '20%' }}
+      ref={ref}
+      initial='hidden'
+      animate={mainControls}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{
         duration: 1,
         ease: 'easeInOut',
+        delay: .25
       }}
-      className='flex flex-col'>
-      <svg height="100" width="100">
-        {/* Círculo exterior */}
-        <circle
-          cx="50"
-          cy="50"
-          r={radius}
-          fill="transparent"
-          stroke="#ddd"
-          strokeWidth="8"
-        />
-        {/* Círculo interior */}
-        <circle
-          cx="50"
-          cy="50"
-          r={radius}
-          fill="transparent"
-          stroke="#247CAC"
-          strokeWidth="8"
-          strokeDasharray={circumference}
-          transform={`rotate(${startAngle * (180 / Math.PI)} 50 50)`}
-          strokeDashoffset={strokeDashoffset}
-        />
-        <text x="50" y="50" textAnchor="middle" dy="7" fontSize="16" fill="#9BBEC8">
-          {percent}%
-        </text>
-      </svg>
+      className='flex flex-col items-center gap-2'
+    >
+      <CircularProgressbar value={filledPercent} text={`${filledPercent}%`} className='h-32' />
       <div className='text-fronttext'>
         {skill}
       </div>

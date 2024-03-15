@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-scroll'
 
-const HeaderAction = ({ goTo, text, itemClass, isOpen }) => {
+const HeaderAction = ({ goTo, text, itemClass, spanClass, isOpen }) => {
   return (
     <>
       <Link
@@ -15,14 +15,16 @@ const HeaderAction = ({ goTo, text, itemClass, isOpen }) => {
           isOpen();
         }}
       >
-        {text}
+        <span className={spanClass}>
+          {text}
+        </span>
       </Link>
     </>
   )
 }
 
 HeaderAction.defaultProps = {
-  isOpen: () => {}
+  isOpen: () => { }
 }
 
 export default HeaderAction
