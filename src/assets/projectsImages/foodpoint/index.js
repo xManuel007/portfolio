@@ -1,0 +1,7 @@
+export { default as FoodPointLogo } from './FoodPointLogo.png'
+export { default as FoodPointLogin  } from './FoodpointLogin.png'
+export { default as FoodPointKitchen } from './Kitchen propuesta 2 xd.png'
+export { default as FoodPointInventory } from './inventory planner.png'
+export { default as FoodPointReports } from './Reports admin.png'
+export { default as FoodPointMenu } from './Service.png'
+export { default as FoodPointServices } from './Service (1).png'

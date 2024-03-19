@@ -1,13 +1,19 @@
-import { FoodPoint, Glicorsa, InteractivePong, RicardoYMartin, TakeMyDog, UDC, Portfolio, InteractivePongGif, React, JavaScript, Git, RoR, Postgresql, CSS, Firebase, NodeJS, TypeScript, Python, I18Next, Tailwind, EmailJS, Sass, Glicorsa2 } from "../assets";
-import { FoodPointLogo, GlicorsaLogo, PongLogo, PortfolioLogo, RicardoLogo, TakeMyDogLogo, UcolLogo } from "../assets/projectLogos";
+import { FoodPointInventory, FoodPointKitchen, FoodPointLogin, FoodPointLogo, FoodPointMenu, FoodPointReports, FoodPointServices } from "../assets/projectsImages/foodpoint";
+import { GlicorsaHome, GlicorsaLogo, GlicorsaVelocity } from "../assets/projectsImages/glicorsa";
+import { PongGamePlay, PongHome, PongLogo } from "../assets/projectsImages/pong";
+import { Portfolio, PortfolioLogo } from "../assets/projectsImages/portfolio";
+import { RickCharacters, RickDimensiones, RickEpisodes, RickLogo } from "../assets/projectsImages/rickandmorty";
+import { TakeMyDogLogo, TakeMyDogMock } from "../assets/projectsImages/takemydog";
+import { UDC, UDCLogo } from "../assets/projectsImages/udc";
+import { TechCss, TechEmailJS, TechFirebase, TechGit, TechI18next, TechJS, TechNextJS, TechNodeJS, TechPostgres, TechPython, TechReacJS, TechRoR, TechSass, TechTailwind, TechTypescript } from "../assets/technologies";
 
 const projectsData = {
   "projects": [
     {
       "image": [
         GlicorsaLogo,
-        Glicorsa2,
-        Glicorsa
+        GlicorsaHome,
+        GlicorsaVelocity
       ],
       "title": "Glicorsa",
       "resume": `
@@ -15,41 +21,55 @@ const projectsData = {
       `,
       "isVisible": true,
       "repo": "www.glicorsa.com",
-      "technologies": [React, I18Next, Tailwind, Git, EmailJS]
+      "technologies": [TechReacJS, TechI18next, TechTailwind, TechGit, TechEmailJS]
     },
     {
       "image": [
         FoodPointLogo,
-        FoodPoint
+        FoodPointInventory,
+        FoodPointServices,
+        FoodPointReports,
+        FoodPointKitchen,
+        FoodPointMenu,
+        FoodPointLogin,
       ],
       "title": "Food Point",
       "resume": "Food Point is a point of sale application for restaurants. It consists of different modules with an easy-to-use interface. Some of the features they include are the ability to manage orders, where orders are generated based on registered items. The Kitchen module allows users to view registered orders and update their status. Reporting functionality helps track sales",
       "isVisible": true,
       "repo": "github.com/BrightCoders-Institute/BCDIC22-RoR-proyecto-final-team3",
-      "technologies": [RoR, Postgresql, CSS, Git]
+      "technologies": [TechRoR, TechPostgres, TechCss, TechGit, TechSass]
     },
     {
-      "image": [TakeMyDogLogo, TakeMyDog],
+      "image": [RickLogo, RickCharacters, RickEpisodes, RickDimensiones],
+      "title": "Rick & Morty",
+      "resume": "Embrace the elegance of API consumption through a delightful array of functions, including enchanting sorting capabilities, captivating search functionalities, and an enchanting details screen that will leave you spellbound.",
+      "isVisible": false,
+      "repo": "main.d1fhzgoonanusy.amplifyapp.com/",
+      "repoUrl": "github.com/xManuel007/rickandmorty",
+      "technologies": [TechTypescript, TechNextJS, TechGit, TechTailwind]
+    },
+    {
+      "image": [TakeMyDogLogo, TakeMyDogMock],
       "title": "Take My Dog",
-      "resume": "Introducing a remarkable mobile app designed to simplify your search for dog walkers, akin to the renowned Uber concept. With this user-friendly platform, you can effortlessly find reliable dog walkers for your beloved canine companions.",
+      "resume": "Introducing a remarkable mobile app designed to simplify your search for dog walkers. With this user-friendly platform, you can effortlessly find reliable dog walkers for your beloved canine companions, also with the certanly of have your dog's position in real time.",
       "isVisible": false,
       "repo": "github.com/BC-MAY-21-RN/proyecto-final-pf-n21-t2",
-      "technologies": [JavaScript, React, Firebase, NodeJS, Git]
+      "technologies": [TechJS, TechReacJS, TechFirebase, TechNodeJS, TechGit]
     },
     {
-      "image": [UcolLogo, UDC],
+      "image": [UDCLogo, UDC],
       "title": "Universidad De Colima",
       "resume": "I Developed a modern and dynamic user interfaces using React JS, while implementing best practices such as test-driven development and utilizing tools for managing local and remote repositories. for this project I don't have repo because its confidential.",
       "isVisible": false,
       "repo": "www.ucol.mx/",
-      "technologies": [JavaScript, React, Sass, NodeJS, Git]
+      "technologies": [TechJS, TechReacJS, TechSass, TechNodeJS, TechGit]
     },
     {
-      "image": [PongLogo, InteractivePong, InteractivePongGif],
+      "image": [PongLogo, PongHome, PongGamePlay ],
       "title": "Interative Pong",
       "resume": "Presenting an extraordinary web app game, It was a school project for the esteemed \"Human-Computer Interaction\" course. Its core functionality lies in the mesmerizing art of controlling the game's paddles with the graceful movement of your hands. Harnessing the remarkable capabilities of the Mediapipe library, this masterpiece detects and responds to the intricate gestures of your hand, granting you boundless possibilities.",
       "isVisible": false,
-      "technologies": [JavaScript, Python, CSS, Git],
+      "technologies": [TechJS, TechPython, TechCss, TechGit],
       "repo": "github.com/xManuel007/interative-pong"
     },
     {
@@ -58,15 +78,7 @@ const projectsData = {
       "resume": "Embrace the elegance of API consumption through a delightful array of functions, including enchanting sorting capabilities, captivating search functionalities, and an enchanting details screen that will leave you spellbound.",
       "isVisible": false,
       "repo": "github.com/xManuel007/rick-morty-api",
-      "technologies": [TypeScript, JavaScript, React, Git, CSS]
-    },
-    {
-      "image": [RicardoLogo, RicardoYMartin],
-      "title": "Rick & Morty",
-      "resume": "Embrace the elegance of API consumption through a delightful array of functions, including enchanting sorting capabilities, captivating search functionalities, and an enchanting details screen that will leave you spellbound.",
-      "isVisible": false,
-      "repo": "github.com/xManuel007/rick-morty-api",
-      "technologies": [TypeScript, JavaScript, React, Git, CSS]
+      "technologies": [TechTypescript, TechJS, TechReacJS, TechGit, TechTailwind, TechSass, TechCss]
     },
   ]
 };
