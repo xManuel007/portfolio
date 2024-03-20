@@ -5,10 +5,9 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-cards';
 import { EffectCards, Autoplay } from 'swiper/modules';
-import { Plus } from 'lucide-react'
+import { Plus } from 'lucide-react';
 import Modal from '../components/ui/modal';
-
-
+import { AnimatePresence } from 'framer-motion';
 
 const Works = () => {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -29,15 +28,16 @@ const Works = () => {
 
   const openModal = (project) => {
     setSelectedProject(project);
+    document.body.style.overflow = 'hidden'; // Bloquear el scroll cuando se abre el modal
   };
 
   const closeModal = () => {
     setSelectedProject(null);
+    document.body.style.overflow = ''; // Restaurar el scroll cuando se cierra el modal
   };
 
   return (
-    <div
-      id='projects' className='bg-navy bg-no-repeat bg-cover max-h-max min-h-screen w-screen flex flex-col'>
+    <div id='projects' className='bg-navy bg-no-repeat bg-cover max-h-max min-h-screen w-screen flex flex-col'>
       <TitleBody backtext='WORKS' firstphrase='MY' secondphrase='PORTFOLIO' />
       <div className='h-full w-full'>
         <Swiper
@@ -56,9 +56,7 @@ const Works = () => {
               className='rounded-md bg-fronttext h-full w-full p-8 flex'
               onClick={() => openModal(project)}
             >
-              <div
-                className='cursor-pointer absolute bottom-2 right-4 text-2xl aspect-square p-1 hover:opacity-60 duration-200'
-              >
+              <div className='cursor-pointer absolute bottom-2 right-4 text-2xl aspect-square p-1 hover:opacity-60 duration-200'>
                 <Plus onClick={() => openModal(project)} className='w-6 h-6' />
               </div>
               <div className='font-extrabold text-xl lg:text-2xl drop-shadow-md h-1/6'>
@@ -66,19 +64,16 @@ const Works = () => {
               </div>
               <div className='flex justify-center items-center h-5/6 w-full'>
                 <div className='flex justify-center items-center h-full w-full'>
-                  <img
-                    src={project.image[0]}
-                    alt='project'
-                    className='w-auto h-3/4 drop-shadow-xl'
-                  />
+                  <img src={project.image[0]} alt='project' className='lg:w-auto lg:h-3/4 drop-shadow-xl' />
                 </div>
               </div>
             </SwiperSlide>
           ))}
         </Swiper>
       </div>
-
-      {selectedProject && (<Modal project={selectedProject} closeModal={closeModal} />)}
+      <AnimatePresence>
+        {selectedProject && <Modal project={selectedProject} closeModal={closeModal} />}
+      </AnimatePresence>
     </div>
   );
 };
