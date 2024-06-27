@@ -8,8 +8,8 @@ const Header = () => {
 
   return (
     <div className={`backdrop-blur-sm lg:p-4 shadow-md fixed top-0 z-50 w-screen
-      duration-500 lg:flex
-      ${menuVisible ? 'h-48' : 'h-16'}`}>
+      duration-500 lg:flex 
+      ${menuVisible ? 'h-screen backdrop-brightness-50' : 'h-16'}`}>
       <div className={`hidden lg:flex items-center justify-between w-full `}>
         <div className='w-1/2 flex flex-row items-center'>
           <img src={LogoMR} alt="Logo Riosoft" className='h-16'/>
@@ -30,12 +30,12 @@ const Header = () => {
         </div>
         <div
           className={`fixed md:hidden z-50 w-full
-            animate-fade animate-duration-700
+            animate-fade animate-duration-700 h-screen flex items-center justify-center
             ${menuVisible ? '' : 'hidden'}`}>
           <div
-            className={`md:block ${menuVisible ? 'translate-x-0' : ''} delay-500 duration-500 flex items-center justify-between`}
+            className={`md:block ${menuVisible ? 'translate-x-0' : ''} delay-500 duration-500 flex items-center justify-between h-screen w-screen`}
           >
-            <ul className='flex flex-col items-start text-xl text-white  w-3/4 h-32'>
+            <ul className='flex flex-col items-start text-3xl text-white h-screen w-screen flex justify-center items-center gap-12'>
                 <HeaderAction itemClass='' text='Resume' goTo='home' />
                 <HeaderAction itemClass='' text='Works' goTo='projects' />
                 <HeaderAction itemClass='' text='Roadmap' goTo='roadmap' />

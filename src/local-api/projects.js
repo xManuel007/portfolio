@@ -1,14 +1,44 @@
 import { FoodPointInventory, FoodPointKitchen, FoodPointLogin, FoodPointLogo, FoodPointMenu, FoodPointReports, FoodPointServices } from "../assets/projectsImages/foodpoint";
 import { GlicorsaHome, GlicorsaLogo, GlicorsaVelocity } from "../assets/projectsImages/glicorsa";
+import { LMELogo, LMEPage } from "../assets/projectsImages/lme";
 import { PongGamePlay, PongHome, PongLogo } from "../assets/projectsImages/pong";
 import { Portfolio, PortfolioLogo } from "../assets/projectsImages/portfolio";
 import { RickCharacters, RickDimensiones, RickEpisodes, RickLogo } from "../assets/projectsImages/rickandmorty";
 import { TakeMyDogLogo, TakeMyDogMock } from "../assets/projectsImages/takemydog";
 import { UDC, UDCLogo } from "../assets/projectsImages/udc";
+import { velocityLogo, velocityPage } from "../assets/projectsImages/velocity";
 import { TechCss, TechEmailJS, TechFirebase, TechGit, TechI18next, TechJS, TechNextJS, TechNodeJS, TechPostgres, TechPython, TechReacJS, TechRoR, TechSass, TechTailwind, TechTypescript } from "../assets/technologies";
 
 const projectsData = {
   "projects": [
+    {
+      "image": [
+        LMELogo,
+        LMEPage,
+      ],
+      "title": "LME",
+      "resume": `
+        Developed and managed functionalities for the company's logistics management platform.
+        Implemented both front-end and back-end solutions to improve user experience and operational efficiency.
+        Collaborated with cross-functional teams to integrate new features and optimize existing ones
+      `,
+      "isVisible": true,
+      "repo": "http://logisticamultimodal.com",
+      "technologies": [TechGit,]
+    },
+    {
+      "image": [
+        velocityLogo,
+        velocityPage,
+      ],
+      "title": "Velocity",
+      "resume": `
+      I had the opportunity to collaborate with an internationally renowned liquor company to develop their online presence. I designed and developed a modern, multilingual website using NextJS and i18next to ensure dynamic user interfaces and global accessibility. Leveraging Amazon Web Services (AWS) for robust infrastructure, including Amazon Amplify, the site achieved high performance and scalability. The project's success significantly enhanced the brand's visibility and accessibility, facilitating its expansion into international markets.
+      `,
+      "isVisible": true,
+      "repo": "www.tequila-velocity.com",
+      "technologies": [TechNextJS, TechI18next, TechTailwind, TechGit, TechEmailJS]
+    },
     {
       "image": [
         GlicorsaLogo,
