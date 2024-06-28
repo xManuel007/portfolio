@@ -14,67 +14,83 @@ const TimeLine = () => {
 
       <TimelineContainer year={2024}>
         <TimelineEvent
-          verb={'finished an'}
-          experience={'Fullstack web project'}
-          place={'Glicorsa'}
-          additional={'I made an web page about a big company, glicorsa.com'}
+          verb={'Started a'}
+          experience={'FullStack Developer Position'}
+          place={'Logistica Multimodal Especializada'}
+          additional={'Worked as a fullstack developer utilizing technologies such as Angular and Laravel.'}
           settings={'Public'}
         />
+        <TimelineEvent
+          verb={'Started a'}
+          experience={'FrontEnd Project'}
+          place={'Velocity'}
+          additional={'Created a landing page for the Velocity brand by Glicorsa.'}
+          settings={'Public'}
+        />
+      <TimelineEvent
+        verb={'Finished a'}
+        experience={'FullStack Web Project'}
+        place={'Glicorsa'}
+        additional={'Developed a website for a major company, glicorsa.com.'}
+        settings={'Public'}
+      />
       </TimelineContainer>
       <TimelineContainer year={2023}>
         <TimelineEvent
-          verb={'start working as'}
-          experience={'FullStack'}
+          verb={'Started working as a'}
+          experience={'FullStack Developer'}
           place={'Glicorsa'}
-          additional={'Just started as a Freelancer, and starting a new project'}
+          additional={'Just started as a freelancer, beginning a new project.'}
           settings={'Public'}
         />
         <TimelineEvent
-          verb={'finished an'}
-          experience={'Engineering'}
+          verb={'Finished an'}
+          experience={'Engineering Degree'}
           place={'University of Colima'}
-          additional={'4 years full of new friendships and unforgettable experiences... I cant belive it T.T '}
+          additional={'Four years full of new friendships and unforgettable experiences... I can’t believe it T.T'}
           settings={'Public'}
         />
         <TimelineEvent
-          verb={'finished a'}
+          verb={'Finished a'}
           experience={'Ruby on Rails Developer Position'}
           place={'BrightCoders'}
-          additional={'I guess ruby its a combination of laravel and python...'}
+          additional={'I think Ruby is a combination of Laravel and Python...'}
           settings={'Public'}
         />
       </TimelineContainer>
 
+
       <TimelineContainer year={2022}>
         <TimelineEvent
-          verb={'started a'}
+          verb={'Started a'}
           experience={'Ruby on Rails Developer Position'}
           place={'BrightCoders'}
-          additional={'Its time to learn another language...'}
+          additional={'It’s time to learn another language...'}
           settings={'Public'}
         />
         <TimelineEvent
-          verb={'finished a'}
+          verb={'Finished a'}
           experience={'React JS Developer Position'}
           place={'University of Colima'}
-          additional={'I collabarated in the development of the Institutional web portal!!'}
+          additional={'I collaborated in the development of the institutional web portal!'}
           settings={'Public'}
         />
         <TimelineEvent
-          verb={'finished a'}
+          verb={'Finished a'}
           experience={'React Native Developer Position'}
           place={'BrightCoders'}
-          additional={'Just made a final app about Dogs, lol.'}
+          additional={'Developed a final app about dogs, lol.'}
           settings={'Public'}
         />
         <TimelineEvent
-          verb={'started a'}
+          verb={'Started a'}
           experience={'React JS Developer Position'}
           place={'University of Colima'}
           additional={'As part of my social service.'}
           settings={'Public'}
         />
       </TimelineContainer>
+
 
       <TimelineContainer year={2021}>
         <TimelineEvent
@@ -88,30 +104,31 @@ const TimeLine = () => {
 
       <TimelineContainer year={2019}>
         <TimelineEvent
-          verb={'started an'}
-          experience={'Engineering'}
+          verb={'Started an'}
+          experience={'Engineering Degree'}
           place={'University of Colima'}
-          settings={'Public'}
           additional={'Internet Technology Engineering'}
+          settings={'Public'}
         />
         <TimelineEvent
-          verb={'finished'}
+          verb={'Finished'}
           experience={'High School'}
           place={'Bachillerato #8'}
-          settings={'Public'}
           additional={'Software Analyst Technician'}
+          settings={'Public'}
         />
       </TimelineContainer>
 
       <TimelineContainer year={2016}>
         <TimelineEvent
-          verb={'started'}
+          verb={'Started'}
           experience={'High School'}
           place={'Bachillerato #8'}
           additional={'Software Analyst Technician'}
           settings={'Public'}
         />
       </TimelineContainer>
+
 
     </div>
   )

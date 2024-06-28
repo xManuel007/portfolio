@@ -9,7 +9,7 @@ const Header = () => {
   return (
     <div className={`backdrop-blur-sm lg:p-4 shadow-md fixed top-0 z-50 w-screen
       duration-500 lg:flex 
-      ${menuVisible ? 'h-screen backdrop-brightness-50' : 'h-16'}`}>
+      ${menuVisible ? 'h-screen backdrop-brightness-[0.2]' : 'h-16'}`}>
       <div className={`hidden lg:flex items-center justify-between w-full `}>
         <div className='w-1/2 flex flex-row items-center'>
           <img src={LogoMR} alt="Logo Riosoft" className='h-16'/>

@@ -26,7 +26,7 @@ const Resume = () => {
             <InfoItem label='Age' value='22 Years' />
             <InfoItem label='Nationality' value='Mexican' />
             <InfoItem label='Freelance' value='Available' />
-            <InfoItem label='Address' value='Colima, Mx' />
+            <InfoItem label='Address' value='Manzanillo, Colima, Mx' />
             <InfoItem label='Phone' isExternaLink='https://api.whatsapp.com/send?phone=3141249893' value='+52 3141249893' />
             <InfoItem label='Email' value='xmanuelrios@gmail.com' />
             <InfoItem label='Languages' value='Spanish, English' />

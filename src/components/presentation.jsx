@@ -34,8 +34,12 @@ const Presentation = () => {
               <img width="48" height="48" src="https://img.icons8.com/color/48/nextjs.png" alt="nextjs" />
               <img width="48" height="48" src="https://img.icons8.com/color/48/ruby-programming-language.png" alt="ruby-programming-language" />
               <img width="48" height="48" src="https://img.icons8.com/plasticine/100/react.png" alt="react" />
+              <img width="48" height="48" src="https://img.icons8.com/fluency/48/angularjs.png" alt="angularjs"/>
+              <img width="48" height="48" src="https://img.icons8.com/fluency/48/laravel.png" alt="laravel"/>
 
               <img width="48" height="48" src="https://img.icons8.com/color/48/git.png" alt="git" />
+              <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/github.png" alt="github"/>
+              <img width="24" height="24" src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/24/external-bitbucket-is-a-web-based-version-control-repository-hosting-service-logo-shadow-tal-revivo.png" alt="external-bitbucket-is-a-web-based-version-control-repository-hosting-service-logo-shadow-tal-revivo"/>
 
               <img width="48" height="48" src="https://img.icons8.com/color/48/typescript.png" alt="typescript" />
               <img width="48" height="48" src="https://img.icons8.com/color/48/javascript--v1.png" alt="javascript--v1" />
