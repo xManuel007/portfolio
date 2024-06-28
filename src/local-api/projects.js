@@ -7,7 +7,7 @@ import { RickCharacters, RickDimensiones, RickEpisodes, RickLogo } from "../asse
 import { TakeMyDogLogo, TakeMyDogMock } from "../assets/projectsImages/takemydog";
 import { UDC, UDCLogo } from "../assets/projectsImages/udc";
 import { velocityLogo, velocityPage } from "../assets/projectsImages/velocity";
-import { TechCss, TechEmailJS, TechFirebase, TechGit, TechI18next, TechJS, TechNextJS, TechNodeJS, TechPostgres, TechPython, TechReacJS, TechRoR, TechSass, TechTailwind, TechTypescript } from "../assets/technologies";
+import { TechAngular, TechBitBucket, TechCss, TechEmailJS, TechFirebase, TechGit, TechI18next, TechJS, TechLaravel, TechNextJS, TechNodeJS, TechPostgres, TechPython, TechReacJS, TechRoR, TechSass, TechTailwind, TechTypescript } from "../assets/technologies";
 
 const projectsData = {
   "projects": [
@@ -23,8 +23,8 @@ const projectsData = {
         Collaborated with cross-functional teams to integrate new features and optimize existing ones
       `,
       "isVisible": true,
-      "repo": "http://logisticamultimodal.com",
-      "technologies": [TechGit,]
+      "repo": "http://logisticamultimodal.com.mx",
+      "technologies": [TechGit, TechAngular, TechBitBucket, TechLaravel]
     },
     {
       "image": [
