@@ -44,23 +44,27 @@ const Works = () => {
   const closeModal = () => { setSelectedProject(null); document.body.style.overflow = ''; }
 
   return (
-    <div id='projects' className='bg-navy bg-no-repeat bg-cover max-h-max min-h-screen w-screen flex flex-col'>
+    <div id='projects' className='bg-navy bg-no-repeat bg-cover min-h-screen w-screen flex flex-col items-center justify-center'>
       <TitleBody backtext='WORKS' firstphrase='MY' secondphrase='PORTFOLIO' />
-      <div className="min-h-screen">
-        <SearchBar searchProject={searchProject} handleChange={handleChange}/>
-        <div className="flex flex-wrap justify-center items-center mt-16 gap-8">
-          {currentProjects.map((project, index) => (
-            <WorkCard
-              key={index}
-              logo={project.image[0]}
-              title={project.title}
-              languages={project.languages}
-              Description={project.resume}
-              openModal={() => openModal(project)}
-            />
-          ))}
+      <div>
+        <SearchBar searchProject={searchProject} handleChange={handleChange} />
+        <div className="flex flex-wrap justify-center items-center mt-8 gap-8 min-h-[40vh]">
+          {currentProjects.length > 0 ? (
+            currentProjects.map((project, index) => (
+              <WorkCard
+                key={index}
+                logo={project.image[0]}
+                title={project.title}
+                languages={project.languages}
+                Description={project.resume}
+                openModal={() => openModal(project)}
+              />
+            ))
+          ) : (
+            <p className="text-gray-400 text-2xl font-semibold">No projects found.</p>
+          )}
         </div>
-        <WorkPagination currentPage={currentPage} totalPages={totalPages} onPageChange={setCurrentPage}/>
+        <WorkPagination currentPage={currentPage} totalPages={totalPages} onPageChange={setCurrentPage} />
       </div>
       <AnimatePresence>
         {selectedProject && <Modal project={selectedProject} closeModal={closeModal} />}

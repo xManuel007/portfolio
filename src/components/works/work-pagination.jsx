@@ -13,9 +13,9 @@ const WorkPagination = ({ currentPage, totalPages, onPageChange }) => {
     }
   };
   return (
-    <div className="flex justify-center items-center mt-4">
+    <div className="flex justify-center items-center mt-8 text-[#c9d1d9]">
       <button
-        className="px-3 py-1 mx-1 bg-gray-200 rounded disabled:opacity-50"
+        className="px-3 py-1 mx-1 h-8 border-[0.2px] border-borderColor bg-[#21262D] hover:bg-[#292e36] rounded disabled:opacity-50"
         onClick={handlePrev}
         disabled={currentPage === 1}
       >
@@ -25,7 +25,7 @@ const WorkPagination = ({ currentPage, totalPages, onPageChange }) => {
         Page {currentPage} of {totalPages}
       </span>
       <button
-        className="px-3 py-1 mx-1 bg-gray-200 rounded disabled:opacity-50"
+        className="px-3 py-1 mx-1 h-8 border-[0.2px] border-borderColor bg-[#21262D] hover:bg-[#292e36] rounded disabled:opacity-50"
         onClick={handleNext}
         disabled={currentPage === totalPages}
       >

@@ -4,8 +4,8 @@ import GalleryTab from "./gallery-tab";
 const Gallery = ({ images }) => {
   return (
     <Tab.Group as='div' className='flex flex-col-reverse w-full h-full'>
-      <div className="mx-auto mt-6 w-full h-full max-w-2xl sm:block lg:max-w-none overflow-visible p-1 overflow-x-auto flex">
-        <Tab.List className={'flex flex-row gap-6'}>
+      <div className="mx-auto mt-6 w-full h-40 max-w-2xl sm:block lg:max-w-none overflow-visible p-1 overflow-x-auto flex">
+        <Tab.List className={'flex flex-row gap-4 h-full items-center'}>
           {images.toReversed().map((image) => (
             <GalleryTab key={image} image={image} />
           ))}
@@ -19,7 +19,7 @@ const Gallery = ({ images }) => {
                 <img
                   src={image}
                   alt="project"
-                  className="w-auto h-full"
+                  className="w-auto h-full object-cover"
                 />
               </div>
             </div>

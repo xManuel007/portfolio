@@ -15,9 +15,9 @@ const Modal = ({ project, closeModal }) => {
       animate={{ opacity: 1, scale: 1 }}
       exit={{ opacity: 0, scale: 0.9 }}
       className='fixed top-0 left-0 w-screen h-screen flex items-center justify-center z-50 backdrop-blur-sm '>
-      <motion.div layout className='absolute w-5/6 h-4/6 bg-fronttext p-8 rounded-md flex flex-col xl:flex-row gap-4 overflow-hidden overflow-y-auto'>
+      <motion.div layout className='absolute w-5/6 h-5/6 bg-[#161b22] border-[#30363d] border-[0.2px] text-gray-400 p-8 rounded-md flex flex-col xl:flex-row gap-4 overflow-hidden overflow-y-auto'>
         <div
-          className='cursor-pointer absolute top-4 right-4 text-2xl'
+          className='cursor-pointer absolute top-4 right-4 h-6 w-6 text-2xl text-[#c9d1d9] border-borderColor border-[0.2px] bg-[#21262D] hover:bg-[#292e36] flex justify-center items-center rounded'
           onClick={closeModal}
         >
           <X className='w-4 h-4 hover:opacity-50 duration-200' />
@@ -28,7 +28,7 @@ const Modal = ({ project, closeModal }) => {
         </div>
 
         <div className='flex flex-col w-full xl:w-1/2 h-1/2 xl:h-full text-justify gap-8'>
-          <div className='font-extrabold text-2xl'>
+          <div className='font-extrabold text-2xl text-[#c9d1d9]'>
             {project.title}
           </div>
           <div className='flex flex-col gap-4 items-center justify-between lg:minh-5/6 p-2'>
@@ -42,7 +42,7 @@ const Modal = ({ project, closeModal }) => {
               href={`https://${project.repo}`}
               rel="noopener noreferrer"
               target="_blank"
-              className='bg-slate-500 rounded-sm p-2 px-5 text-white w-fit'
+              className='rounded flex justify-center items-center p-2 px-5 w-fit text-[#c9d1d9] border-borderColor h-8 border-[0.2px] bg-[#21262D] hover:bg-[#292e36] '
             >Visit</a>
           </div>
         </div>
