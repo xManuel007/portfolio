@@ -8,6 +8,7 @@ import { EffectCards, Autoplay } from 'swiper/modules';
 import { Plus } from 'lucide-react';
 import Modal from '../components/ui/modal';
 import { AnimatePresence } from 'framer-motion';
+import WorksContainer from '../components/works/work-container';
 
 const Works = () => {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -39,6 +40,7 @@ const Works = () => {
   return (
     <div id='projects' className='bg-navy bg-no-repeat bg-cover max-h-max min-h-screen w-screen flex flex-col'>
       <TitleBody backtext='WORKS' firstphrase='MY' secondphrase='PORTFOLIO' />
+      <WorksContainer />
       <div className='h-full w-full'>
         <Swiper
           effect={'cards'}

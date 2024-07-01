@@ -9,9 +9,11 @@ module.exports = {
     },
     extend: {
       colors: {
-        navy: '#152836',
+        navy2: '#152836',
+        navy: '#010409',
         backtext: '#164863',
-        fronttext: '#9BBEC8'
+        fronttext: '#9BBEC8',
+        borderColor: '#30363d'
       },
       backgroundImage: {
         'waves-background': "url('/src/assets/design/waves.jpg')",
