@@ -1,77 +1,66 @@
 import React, { useEffect, useState } from 'react';
 import TitleBody from '../components/ui/title-part';
 import projectsData from '../local-api/projects';
-import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-cards';
-import { EffectCards, Autoplay } from 'swiper/modules';
-import { Plus } from 'lucide-react';
 import Modal from '../components/ui/modal';
 import { AnimatePresence } from 'framer-motion';
-import WorksContainer from '../components/works/work-container';
+import SearchBar from '../components/works/search-bar';
+import WorkCard from '../components/works/work-card';
+import WorkPagination from '../components/works/work-pagination';
 
 const Works = () => {
   const [selectedProject, setSelectedProject] = useState(null);
+  const [searchProject, setSearchProject] = useState('');
+  const [currentPage, setCurrentPage] = useState(1);
+  const projectsPerPage = 4;
+
+  const handleChange = (e) => {
+    setSearchProject(e.target.value)
+    setCurrentPage(1);
+  }
+
+  const filteredData = projectsData.projects.filter((item) =>
+    item.title.toLowerCase().includes(searchProject.toLowerCase())
+  );
+
+
+  const totalPages = Math.ceil(filteredData.length / projectsPerPage);
+  const startIndex = (currentPage - 1) * projectsPerPage;
+  const currentProjects = filteredData.slice(startIndex, startIndex + projectsPerPage);
+
 
   useEffect(() => {
-    const handleKeyDown = (event) => {
-      if (event.keyCode === 27) { // 27 is the keyCode for "Esc" key
-        closeModal();
-      }
-    };
+    const handleKeyDown = (event) => { if (event.keyCode === 27) closeModal() }
 
-    document.addEventListener('keydown', handleKeyDown);
+    document.addEventListener('keydown', handleKeyDown)
 
     return () => {
-      document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener('keydown', handleKeyDown)
     };
   }, []);
 
-  const openModal = (project) => {
-    setSelectedProject(project);
-    document.body.style.overflow = 'hidden'; // Bloquear el scroll cuando se abre el modal
-  };
-
-  const closeModal = () => {
-    setSelectedProject(null);
-    document.body.style.overflow = ''; // Restaurar el scroll cuando se cierra el modal
-  };
+  const openModal = (project) => { setSelectedProject(project); document.body.style.overflow = 'hidden'; }
+  const closeModal = () => { setSelectedProject(null); document.body.style.overflow = ''; }
 
   return (
     <div id='projects' className='bg-navy bg-no-repeat bg-cover max-h-max min-h-screen w-screen flex flex-col'>
       <TitleBody backtext='WORKS' firstphrase='MY' secondphrase='PORTFOLIO' />
-      <WorksContainer />
-      <div className='h-full w-full'>
-        <Swiper
-          effect={'cards'}
-          grabCursor={true}
-          modules={[EffectCards, Autoplay]}
-          autoplay={{
-            delay: 2500,
-            disableOnInteraction: false,
-          }}
-          className='mySwiper lg:w-96 lg:h-96 w-52 h-80 flex justify-center items-center mt-16'
-        >
-          {projectsData.projects.map((project, index) => (
-            <SwiperSlide
+      <div className="min-h-screen">
+        <SearchBar searchProject={searchProject} handleChange={handleChange}/>
+        <div className="flex flex-wrap justify-center items-center mt-16 gap-8">
+          {currentProjects.map((project, index) => (
+            <WorkCard
               key={index}
-              className='rounded-md bg-fronttext h-full w-full p-8 flex'
-              onClick={() => openModal(project)}
-            >
-              <div className='cursor-pointer absolute bottom-2 right-4 text-2xl aspect-square p-1 hover:opacity-60 duration-200'>
-                <Plus onClick={() => openModal(project)} className='w-6 h-6' />
-              </div>
-              <div className='font-extrabold text-xl lg:text-2xl drop-shadow-md h-1/6'>
-                {project.title}
-              </div>
-              <div className='flex justify-center items-center h-5/6 w-full'>
-                <div className='flex justify-center items-center h-full w-full'>
-                  <img src={project.image[0]} alt='project' className='lg:w-auto lg:h-3/4 drop-shadow-xl' />
-                </div>
-              </div>
-            </SwiperSlide>
+              logo={project.image[0]}
+              title={project.title}
+              languages={project.languages}
+              Description={project.resume}
+              openModal={() => openModal(project)}
+            />
           ))}
-        </Swiper>
+        </div>
+        <WorkPagination currentPage={currentPage} totalPages={totalPages} onPageChange={setCurrentPage}/>
       </div>
       <AnimatePresence>
         {selectedProject && <Modal project={selectedProject} closeModal={closeModal} />}
