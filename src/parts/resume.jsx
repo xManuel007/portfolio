@@ -5,6 +5,7 @@ import ButtonCV from '../components/button-cv'
 import InfoItem from '../components/ui/into-item';
 import Card from '../components/ui/card';
 import Presentation from '../components/presentation';
+import { SkillsComponent } from '../components/skills/skills';
 
 const Resume = () => {
   const today = new Date();
@@ -52,7 +53,8 @@ const Resume = () => {
       <div className='flex flex-col p-4 w-full items-center'>
         <div className='text-white font-bold text-xl mb-4'>MY SKILLS</div>
         <div className='grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-x-40'>
-          <PercentageCircle percent={90} skill={'Git'} />
+          <SkillsComponent/>
+          {/* <PercentageCircle percent={90} skill={'Git'} />
           <PercentageCircle percent={90} skill={'Github'} />
           <PercentageCircle percent={90} skill={'Bitbucket'} />
           <PercentageCircle percent={70} skill={'JavaScript'} />
@@ -69,7 +71,7 @@ const Resume = () => {
           <PercentageCircle percent={80} skill={'Tawilwind'} />
           <PercentageCircle percent={60} skill={'Ruby On Rails'} />
           <PercentageCircle percent={60} skill={'Python'} />
-          <PercentageCircle percent={80} skill={'DataBases'} />
+          <PercentageCircle percent={80} skill={'DataBases'} /> */}
         </div>
       </div>
     </div>

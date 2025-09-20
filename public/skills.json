@@ -1,0 +1,194 @@
+{
+  "nodes": [
+    { "id": "Skills", "group": 0 },
+
+    { "id": "Frontend", "group": 1 },
+    { "id": "Backend", "group": 2 },
+    { "id": "Cloud & DevOps", "group": 4 },
+    { "id": "Data & AI", "group": 5 },
+    { "id": "Styling & Tools", "group": 6 },
+    { "id": "Soft Skills", "group": 7 },
+    { "id": "Languages", "group": 8 },
+    { "id": "Code Languages", "group": 9 },
+
+    { "id": "React", "group": 1 },
+    { "id": "Angular", "group": 1 },
+    { "id": "Next.js", "group": 1 },
+    { "id": "Astro", "group": 1 },
+    { "id": "Redux", "group": 1 },
+    { "id": "Context API", "group": 1 },
+    { "id": "Vite", "group": 1 },
+
+    { "id": "Node.js", "group": 2 },
+    { "id": "Laravel", "group": 2 },
+    { "id": "API Rest", "group": 2 },
+    { "id": "NestJS", "group": 2 },
+    { "id": "Ruby on Rails", "group": 2 },
+    { "id": "Flask", "group": 2 },
+
+
+    { "id": "AWS", "group": 4 },
+    { "id": "GCP", "group": 4 },
+    { "id": "Docker", "group": 4 },
+    { "id": "Amplify", "group": 4 },
+    { "id": "S3", "group": 4 },
+    { "id": "EC2", "group": 4 },
+    { "id": "Route 53", "group": 4 },
+    { "id": "GitHub", "group": 4 },
+    { "id": "Bitbucket", "group": 4 },
+    { "id": "Git", "group": 4 },
+    { "id": "Laragon", "group": 4 },
+    { "id": "GoDaddy", "group": 4 },
+    { "id": "Google Maps API", "group": 4 },
+
+    { "id": "SQL Server", "group": 5 },
+    { "id": "PostgreSQL", "group": 5 },
+    { "id": "MySQL", "group": 5 },
+    { "id": "MongoDB", "group": 5 },
+    { "id": "Json", "group": 5 },
+    { "id": "OpenAI", "group": 5 },
+    { "id": "Textract", "group": 5 },
+
+    { "id": "Tailwind", "group": 6 },
+    { "id": "SCSS", "group": 6 },
+    { "id": "CSS", "group": 6 },
+    { "id": "Bootstrap", "group": 6 },
+    { "id": "Shadcn", "group": 6 },
+    { "id": "Chakra UI", "group": 6 },
+    { "id": "Postman", "group": 6 },
+
+    { "id": "Teamwork", "group": 7 },
+    { "id": "Leadership", "group": 7 },
+    { "id": "Communication", "group": 7 },
+    { "id": "Time Management", "group": 7 },
+    { "id": "Critical Thinking", "group": 7 },
+    { "id": "Mentoring", "group": 7 },
+    { "id": "Constant Learning", "group": 7 },
+
+    { "id": "Spanish (Native)", "group": 8 },
+    { "id": "English (B2)", "group": 8 },
+
+    { "id": "JavaScript", "group": 8 },
+    { "id": "TypeScript", "group": 8 },
+    { "id": "Ruby", "group": 8 },
+    { "id": "Python", "group": 8 },
+    { "id": "GO", "group": 8 },
+    { "id": "C++", "group": 8 },
+    { "id": "PHP", "group": 8 }
+  ],
+  "links": [
+    { "source": "Skills", "target": "Frontend" },
+    { "source": "Skills", "target": "Backend" },
+    { "source": "Skills", "target": "Cloud & DevOps" },
+    { "source": "Skills", "target": "Data & AI" },
+    { "source": "Skills", "target": "Styling & Tools" },
+    { "source": "Skills", "target": "Soft Skills" },
+    { "source": "Skills", "target": "Languages" },
+
+    { "source": "Frontend", "target": "React" },
+    { "source": "Frontend", "target": "Angular" },
+    { "source": "Frontend", "target": "Next.js" },
+    { "source": "Frontend", "target": "Astro" },
+    { "source": "Frontend", "target": "Vite" },
+
+    { "source": "React", "target": "Redux" },
+    { "source": "Next.js", "target": "Redux" },
+    { "source": "Astro", "target": "Redux" },
+
+    { "source": "React", "target": "Context API" },
+    { "source": "Next.js", "target": "Context API" },
+    { "source": "Astro", "target": "Context API" },
+
+    { "source": "Backend", "target": "Node.js" },
+    { "source": "Backend", "target": "Laravel" },
+    { "source": "Backend", "target": "NestJS" },
+    { "source": "Backend", "target": "Ruby on Rails" },
+    { "source": "Backend", "target": "Flask" },
+    { "source": "Backend", "target": "API Rest" },
+    { "source": "Backend", "target": "Json" },
+
+    { "source": "Cloud & DevOps", "target": "AWS" },
+    { "source": "Cloud & DevOps", "target": "GCP" },
+    { "source": "Cloud & DevOps", "target": "Docker" },
+    { "source": "Cloud & DevOps", "target": "Git" },
+    { "source": "Cloud & DevOps", "target": "Laragon" },
+    { "source": "Cloud & DevOps", "target": "GoDaddy" },
+
+    { "source": "GCP", "target": "Google Maps API" },
+
+    { "source": "AWS", "target": "Amplify" },
+    { "source": "AWS", "target": "S3" },
+    { "source": "AWS", "target": "EC2" },
+    { "source": "AWS", "target": "Route 53" },
+    
+    { "source": "Git", "target": "Bitbucket" },
+    { "source": "Git", "target": "GitHub" },
+
+
+    { "source": "Data & AI", "target": "SQL Server" },
+    { "source": "Data & AI", "target": "PostgreSQL" },
+    { "source": "Data & AI", "target": "MySQL" },
+    { "source": "Data & AI", "target": "MongoDB" },
+    { "source": "Data & AI", "target": "OpenAI" },
+    { "source": "Data & AI", "target": "Textract" },
+
+    { "source": "Styling & Tools", "target": "Tailwind" },
+    { "source": "Styling & Tools", "target": "SCSS" },
+    { "source": "Styling & Tools", "target": "Postman" },
+    { "source": "Styling & Tools", "target": "CSS" },
+    { "source": "Styling & Tools", "target": "Shadcn" },
+    { "source": "Styling & Tools", "target": "Chakra UI" },
+    { "source": "Styling & Tools", "target": "Bootstrap" },
+
+    { "source": "Soft Skills", "target": "Teamwork" },
+    { "source": "Soft Skills", "target": "Leadership" },
+    { "source": "Soft Skills", "target": "Communication" },
+    { "source": "Soft Skills", "target": "Time Management" },
+    { "source": "Soft Skills", "target": "Critical Thinking" },
+    { "source": "Soft Skills", "target": "Mentoring" },
+    { "source": "Soft Skills", "target": "Constant Learning" },
+
+    { "source": "Languages", "target": "Spanish (Native)" },
+    { "source": "Languages", "target": "English (B2)" },
+
+
+    { "source": "Code Languages", "target": "JavaScript" },
+    { "source": "Code Languages", "target": "TypeScript" },
+    { "source": "Code Languages", "target": "Ruby" },
+    { "source": "Code Languages", "target": "Python" },
+    { "source": "Code Languages", "target": "GO" },
+    { "source": "Code Languages", "target": "C++" },
+    { "source": "Code Languages", "target": "PHP" },
+
+    
+
+    { "source": "React", "target": "JavaScript" },
+    { "source": "React", "target": "TypeScript" },
+    { "source": "React", "target": "Shadcn" },
+    { "source": "React", "target": "CSS" },
+    { "source": "React", "target": "SCSS" },
+    { "source": "React", "target": "Tailwind" },
+    { "source": "React", "target": "Chakra UI" },
+    { "source": "React", "target": "TypeScript" },
+
+    { "source": "Angular", "target": "TypeScript" },
+    { "source": "Angular", "target": "SCSS" },
+    { "source": "Angular", "target": "CSS" },
+    { "source": "Angular", "target": "Bootstrap" },
+
+    { "source": "GoDaddy", "target": "Route 53" },
+
+    { "source": "Next.js", "target": "Tailwind" },
+    { "source": "Next.js", "target": "Shadcn" },
+    { "source": "Node.js", "target": "TypeScript" },
+    { "source": "Astro", "target": "TypeScript" },
+    { "source": "Next.js", "target": "React" },
+    { "source": "Vite", "target": "React" },
+    { "source": "Flask", "target": "Python" },
+    { "source": "Ruby on Rails", "target": "Ruby" },
+    { "source": "Laravel", "target": "PHP" },
+    { "source": "NestJS", "target": "Node.js" },
+    { "source": "AWS", "target": "Cloud & DevOps" },
+    { "source": "SQL Server", "target": "Data & AI" }
+  ]
+}
