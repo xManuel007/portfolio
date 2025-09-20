@@ -8,6 +8,7 @@ import { AnimatePresence } from 'framer-motion';
 import SearchBar from '../components/works/search-bar';
 import WorkCard from '../components/works/work-card';
 import WorkPagination from '../components/works/work-pagination';
+import { getElapsedTime } from '../utils/time';
 
 const Works = () => {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -58,6 +59,7 @@ const Works = () => {
                 languages={project.languages}
                 Description={project.resume}
                 openModal={() => openModal(project)}
+                time={getElapsedTime(project.time)}
               />
             ))
           ) : (

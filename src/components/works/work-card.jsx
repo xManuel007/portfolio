@@ -1,8 +1,7 @@
 import StarButton from "../ui/star-button";
 import { useLanguage } from '../../hooks/useLanguage';
-import TimeAgo from 'javascript-time-ago'
-import en from 'javascript-time-ago/locale/en'
 import { BookMarked } from "lucide-react";
+import { formatDuration } from "../../utils/time";
 
 const WorkCard = ({
   languages = ['HTML'],
@@ -11,12 +10,10 @@ const WorkCard = ({
   time = (2 * 60 * 1000),
   logo,
   Description,
-  bgImage = 'bg-[#9BBEC8]',
+  bgImage = 'bg-[#70888e]',
   openModal
 }) => {
-  TimeAgo.addLocale(en)
 
-  const timeAgo = new TimeAgo('en-US')
   const GetColor = (language) => useLanguage(language);
 
   return (
@@ -52,7 +49,7 @@ const WorkCard = ({
             ))}
           </div>
           <div>
-            {'Updated ' + timeAgo.format(Date.now() - time)}
+            {'Updated ' + formatDuration(time) + " ago"}
           </div>
         </div>
       </div>

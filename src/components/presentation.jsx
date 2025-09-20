@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { MySelft } from "../assets";
+import { MySelf } from "../assets";
 import EncryptAnimation from "../lib/encrypt-animation";
 
 const Presentation = () => {
@@ -60,8 +60,8 @@ const Presentation = () => {
           </div>
         </div>
       </div>
-      <div className="flex lg:w-1/2 items-center justify-center aspect-square sm:h-80 lg:h-96 xl:h-[30rem]  hover:-translate-y-4 duration-200">
-        <img src={MySelft} alt="Manuel Rios" className="rounded-md h-full shadow-xl" />
+      <div className="flex lg:w-1/2 items-center justify-center aspect-square sm:h-80 lg:h-96 xl:h-[30rem]">
+        <img src={MySelf} alt="Manuel Rios" className="rounded-md h-full shadow-xl hover:-translate-y-4 duration-200" />
       </div>
     </div>
   );

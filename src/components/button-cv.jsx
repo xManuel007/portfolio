@@ -1,6 +1,5 @@
 import React from 'react'
-import CVManu from '../assets/personal/CV-05032024.pdf'
-
+import CVManu from '../assets/personal/cv_Manuel_Eduardo_Ríos_Martínez_fsen.pdf'
 const ButtonCV = () => {
   return (
     <a href={CVManu} rel="noopener noreferrer" target="_blank">

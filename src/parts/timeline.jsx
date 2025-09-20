@@ -6,6 +6,7 @@ import { LMELogo } from '../assets/projectsImages/lme'
 import { velocityLogo } from '../assets/projectsImages/velocity'
 import { GlicorsaLogo } from '../assets/projectsImages/glicorsa'
 import { UDCLogo } from '../assets/projectsImages/udc'
+import { getElapsedTime } from '../utils/time'
 
 const TimeLine = () => {
   return (
@@ -23,7 +24,7 @@ const TimeLine = () => {
           place={'Logistica Multimodal Especializada'}
           additional={'Worked as a fullstack developer utilizing technologies such as Angular and Laravel.'}
           settings={'Public'}
-          time={2 * 7 * 24 * 60 * 60 * 1000}
+          time={getElapsedTime('2024-06-17')}
           languages={['HTML', 'PHP', 'TypeScript', 'SCSS']}
           stars='1.2k'
           imageCompany={LMELogo}
@@ -34,7 +35,7 @@ const TimeLine = () => {
           place={'Velocity'}
           additional={'Created a landing page for the Velocity brand by Glicorsa.'}
           settings={'Public'}
-          time={2 * 4 * 7 * 24 * 60 * 60 * 1000}
+          time={getElapsedTime('2024-02-01')}
           languages={['HTML', 'TypeScript', 'SCSS']}
           stars='2k'
           bgColorCompany={false}
@@ -46,7 +47,7 @@ const TimeLine = () => {
           place={'Glicorsa'}
           additional={'Developed a website for a major company, glicorsa.com.'}
           settings={'Public'}
-          time={6 * 4 * 7 * 24 * 60 * 60 * 1000}
+          time={getElapsedTime('2023-12-17')}
           languages={['HTML', 'TypeScript', 'SCSS']}
           stars='200'
           bgColorCompany={false}
@@ -60,7 +61,7 @@ const TimeLine = () => {
           place={'Glicorsa'}
           additional={'Just started as a freelancer, beginning a new project.'}
           settings={'Public'}
-          time={10 * 4 * 7 * 24 * 60 * 60 * 1000}
+          time={getElapsedTime('2023-11-17')}
           languages={['HTML', 'TypeScript', 'SCSS']}
           stars='1.5k'
           bgColorCompany={false}
@@ -72,7 +73,7 @@ const TimeLine = () => {
           place={'University of Colima'}
           additional={'Four years full of new friendships and unforgettable experiences... I can’t believe it T.T'}
           settings={'Public'}
-          time={12 * 4 * 7 * 24 * 60 * 60 * 1000}
+          time={getElapsedTime('2023-08-01')}
           languages={['HTML', 'TypeScript', 'JavaScript', 'PHP', 'CSS', 'Python']}
           stars='5.2k'
           imageCompany={UDCLogo}
@@ -83,7 +84,7 @@ const TimeLine = () => {
           place={'BrightCoders'}
           additional={'I think Ruby is a combination of Laravel and Python...'}
           settings={'Public'}
-          time={13 * 4 * 7 * 24 * 60 * 60 * 1000}
+          time={getElapsedTime('2023-06-01')}
           languages={['HTML', 'Ruby', 'JavaScript', 'SCSS']}
           stars='2.2k'
           imageCompany={'https://media-exp1.licdn.com/dms/image/C560BAQF3zUuvKyf2NA/company-logo_200_200/0/1656948222145?e=2147483647&v=beta&t=a6mgHbjDPoNgqo-2j9y_r2oD98XQWI-2phjxWXRxYS8'}
@@ -98,7 +99,7 @@ const TimeLine = () => {
           place={'BrightCoders'}
           additional={'It’s time to learn another language...'}
           settings={'Public'}
-          time={16 * 4 * 7 * 24 * 60 * 60 * 1000}
+          time={getElapsedTime('2022-12-01')}
           languages={['HTML', 'Ruby', 'JavaScript', 'SCSS']}
           stars='10'
           imageCompany={'https://media-exp1.licdn.com/dms/image/C560BAQF3zUuvKyf2NA/company-logo_200_200/0/1656948222145?e=2147483647&v=beta&t=a6mgHbjDPoNgqo-2j9y_r2oD98XQWI-2phjxWXRxYS8'}
@@ -109,7 +110,7 @@ const TimeLine = () => {
           place={'University of Colima'}
           additional={'I collaborated in the development of the institutional web portal!'}
           settings={'Public'}
-          time={20 * 4 * 7 * 24 * 60 * 60 * 1000}
+          time={getElapsedTime('2022-11-01')}
           languages={['HTML', 'JavaScript', 'PHP', 'CSS']}
           stars='1.2k'
           imageCompany={UDCLogo}
@@ -120,7 +121,7 @@ const TimeLine = () => {
           place={'BrightCoders'}
           additional={'Developed a final app about dogs, lol.'}
           settings={'Public'}
-          time={24 * 4 * 7 * 24 * 60 * 60 * 1000}
+          time={getElapsedTime('2022-03-01')}
           languages={['HTML', 'JavaScript']}
           stars='3.2k'
           imageCompany={'https://media-exp1.licdn.com/dms/image/C560BAQF3zUuvKyf2NA/company-logo_200_200/0/1656948222145?e=2147483647&v=beta&t=a6mgHbjDPoNgqo-2j9y_r2oD98XQWI-2phjxWXRxYS8'}
@@ -131,7 +132,7 @@ const TimeLine = () => {
           place={'University of Colima'}
           additional={'As part of my social service.'}
           settings={'Public'}
-          time={28 * 4 * 7 * 24 * 60 * 60 * 1000}
+          time={getElapsedTime('2022-02-01')}
           languages={['HTML', 'JavaScript', 'PHP', 'CSS']}
           stars='1k'
           imageCompany={UDCLogo}
@@ -146,7 +147,7 @@ const TimeLine = () => {
           place={'BrightCoders'}
           additional={'Amazing to got this new experience!!'}
           settings={'Public'}
-          time={32 * 4 * 7 * 24 * 60 * 60 * 1000}
+          time={getElapsedTime('2021-11-01')}
           languages={['HTML', 'JavaScript']}
           stars='10.2k'
           imageCompany={'https://media-exp1.licdn.com/dms/image/C560BAQF3zUuvKyf2NA/company-logo_200_200/0/1656948222145?e=2147483647&v=beta&t=a6mgHbjDPoNgqo-2j9y_r2oD98XQWI-2phjxWXRxYS8'}
@@ -160,7 +161,7 @@ const TimeLine = () => {
           place={'University of Colima'}
           additional={'Internet Technology Engineering'}
           settings={'Public'}
-          time={4 * 12 * 4 * 7 * 24 * 60 * 60 * 1000}
+          time={getElapsedTime('2019-08-01')}
           stars='7k'
           languages={['HTML', 'TypeScript', 'JavaScript', 'PHP', 'CSS', 'Java', 'C++', 'Python']}
           imageCompany={UDCLogo}
@@ -171,7 +172,7 @@ const TimeLine = () => {
           place={'Bachillerato #8'}
           additional={'Software Analyst Technician'}
           settings={'Public'}
-          time={5 * 12 * 4 * 7 * 24 * 60 * 60 * 1000}
+          time={getElapsedTime('2019-08-01')}
           stars='1.2k'
           languages={['HTML', 'JavaScript', 'CSS', 'Java', 'C++']}
           imageCompany={UDCLogo}
@@ -185,7 +186,7 @@ const TimeLine = () => {
           place={'Bachillerato #8'}
           additional={'Software Analyst Technician'}
           settings={'Public'}
-          time={8 * 12 * 4 * 7 * 24 * 60 * 60 * 1000}
+          time={getElapsedTime('2016-08-01')}
           stars='777'
           languages={['HTML', 'JavaScript', 'CSS', 'Java', 'C++']}
           imageCompany={UDCLogo}

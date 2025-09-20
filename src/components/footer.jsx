@@ -18,7 +18,7 @@ const Footer = () => {
         <a href='https://api.whatsapp.com/send?phone=3141249893' rel="noopener noreferrer" target="_blank">
           <img src={Whatsapp} alt='Whatsapp' className='hover:animate-pulse duration-500'/>
         </a>
-        <a href='https://www.instagram.com/justrios_/' rel="noopener noreferrer" target="_blank">
+        <a href='https://www.instagram.com/___just_manu/' rel="noopener noreferrer" target="_blank">
           <img src={Instagram} alt='Instagram' className='hover:animate-pulse duration-500'/>
         </a>
         {/* <a href='https://www.youtube.com/channel/UCsYEvVhtRECJpV_7lUpdnTQ' rel="noopener noreferrer" target="_blank">

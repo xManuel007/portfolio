@@ -9,6 +9,7 @@ import Whatsapp from './contact/icons8-whatsapp-50.png'
 import Youtube from './contact/icons8-youtube-50.png'
 
 import MySelft from './personal/yo.jpg'
+import MySelf from './personal/manu.jpg'
 
 
 export {
@@ -21,5 +22,6 @@ export {
   Whatsapp,
   Youtube,
 
-  MySelft
+  MySelft,
+  MySelf
 }

@@ -1,10 +1,9 @@
 import React from 'react';
 import { MySelft } from '../../assets';
 import { Star } from 'lucide-react';
-import TimeAgo from 'javascript-time-ago'
-import en from 'javascript-time-ago/locale/en'
 import { useLanguage } from '../../hooks/useLanguage';
 import StarButton from '../ui/star-button';
+import { formatDuration } from '../../utils/time';
 
 const TimelineEvent = ({
   verb,
@@ -18,10 +17,6 @@ const TimelineEvent = ({
   bgColorCompany = true,
   imageCompany
 }) => {
-  TimeAgo.addLocale(en)
-
-  const timeAgo = new TimeAgo('en-US')
-
 
   const GetColor = (language) => useLanguage(language);
 
@@ -40,15 +35,12 @@ const TimelineEvent = ({
                 Manuel Rios
               </span>
               <div className='font-light text-gray-400'>
-                {timeAgo.format(Date.now() - time)}
+                {formatDuration(time) + " ago"}
               </div>
             </div>
             <span className="font-light text-gray-300">
               {verb}{' '}{experience}
             </span>{' '}
-            {/* <span className="h-6 w-fit hinline-flex items-center justify-center text-xs font-normal text-gray-400 border-gray-700 border-[0.2px] rounded-full p-0.5 px-2 cursor-default">
-              {settings}
-            </span> */}
           </div>
 
         </div>
@@ -58,7 +50,7 @@ const TimelineEvent = ({
         <div className='flex items-center flex-row justify-between gap-2'>
           <div className='flex flex-row items-center gap-2'>
             <div className={`h-6 w-6 ${bgColorCompany ? 'bg-white' : 'bg-black'} rounded-full`}>
-              <img src={imageCompany} alt='Company' className='h-full w-full'/>
+              <img src={imageCompany} alt='Company' className='h-full w-full' />
             </div>
             <span className="font-medium text-white text-xl">
               {place}
