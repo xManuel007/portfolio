@@ -1,26 +1,60 @@
-import React from 'react'
+import React, { useState } from 'react'
 import CVManu from '../assets/personal/cv_Manuel_Eduardo_Ríos_Martínez_fsen.pdf'
+import { ChevronDown, Download, Save } from 'lucide-react'
+
 const ButtonCV = () => {
+  const [isDownloaded, setDownloaded] = useState(false)
+  const [showEasterEgg, setShowEasterEgg] = useState(false)
+
+  const handleSave = () => {
+    setDownloaded(true)
+    const timer = setTimeout(() => {
+      setDownloaded(false)
+    }, 2500)
+    return () => clearTimeout(timer)
+  }
+
+  const handleEasterEgg = () => {
+    setShowEasterEgg(true)
+    setTimeout(() => setShowEasterEgg(false), 2000)
+  }
+
   return (
-    <a href={CVManu} rel="noopener noreferrer" target="_blank">
-      <button
-      className="overflow-hidden relative w-46 p-4 flex text-center items-center h-12 bg-black text-white border-none rounded-md text-lg font-bold cursor-pointer z-10 group"
+    <div className="relative border-[0.2px] border-[#30363d] bg-[#21262D] flex items-center rounded-md cursor-pointer h-10 overflow-visible">
+      {/* Botón principal */}
+      <a href={CVManu} rel="noopener noreferrer" target="_blank">
+        <div
+          onClick={() => handleSave()}
+          className="flex flex-row gap-2 p-2 rounded-l-md hover:bg-[#292e36] font-semibold items-center"
+        >
+          <div>
+            {isDownloaded ? (
+              <Save size={17} color="#8d96a0" />
+            ) : (
+              <Download size={17} color="#8d96a0" />
+            )}
+          </div>
+          <div className="text-[#c9d1d9]">
+            {isDownloaded ? 'Got it!' : 'Grab my CV'}
+          </div>
+        </div>
+      </a>
+
+      {/* Chevron + Easter Egg */}
+      <div
+        onClick={handleEasterEgg}
+        className="border-l-[0.2px] border-[#30363d] flex justify-center items-center p-2 rounded-r-md hover:bg-[#292e36] relative"
       >
-        Resume
-        <span
-          className="absolute w-48 h-32 -top-8 -left-2 bg-sky-200 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-500 duration-1000 origin-right"
-        ></span>
-        <span
-          className="absolute w-48 h-32 -top-8 -left-2 bg-sky-400 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-700 duration-700 origin-right"
-        ></span>
-        <span
-          className="absolute w-48 h-32 -top-8 -left-2 bg-sky-600 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-1000 duration-500 origin-right"
-        ></span>
-        <span
-          className="group-hover:opacity-100 group-hover:duration-1000 duration-100 opacity-0 absolute top-2.5 left-6 z-10"
-          >Open it!</span>
-      </button>
-    </a>
+        <ChevronDown size={17} color="#c9d1d9" />
+
+        {/* Tooltip del easter egg */}
+        {showEasterEgg && (
+          <div className="absolute bottom-[-1.8rem] right-1/2 translate-x-1/2 bg-[#30363d] text-white text-xs px-3 py-1 rounded-md shadow-md animate-fade w-48">
+            Just kidding, no dropdown
+          </div>
+        )}
+      </div>
+    </div>
   )
 }
 

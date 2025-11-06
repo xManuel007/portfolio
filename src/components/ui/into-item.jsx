@@ -15,32 +15,30 @@ const InfoItem = ({ label, value, className, isExternaLink }) => {
   }, [isInView, mainControls])
 
   return (
-    <div>
-      <motion.div
-        ref={ref}
-        animate={mainControls}
-        initial={{ opacity: 0, x: '-20%' }}
-        transition={{
-          duration: 1,
-          ease: 'easeInOut',
-          delay: .25
-        }}
-        className=' flex mb-2 gap-2'>
-        <span className='text-lg text-slate-400'>{label}:</span>
-        <span className={`${className} text-lg text-slate-200 `}>
-          {isExternaLink ?
-            <a
-              href={isExternaLink}
-              target='_blank'
-              rel='noopener noreferrer'
-              className='flex flex-row gap-1 items-center hover:opacity-70 duration-200'>
-              {value}
-              <ExternalLink color='white' size={20} />
-            </a>
-            : value}
-        </span>
-      </motion.div>
-    </div>
+    <motion.div
+      ref={ref}
+      animate={mainControls}
+      initial={{ opacity: 0, x: '-10%' }}
+      transition={{ duration: 0.6, ease: 'easeOut' }}
+      className="flex mb-1 gap-2 items-center"
+    >
+      <span className="text-xl text-[#8b949e] w-28">{label}:</span>
+      <span className={`${className} text-xl text-[#c9d1d9] break-all`}>
+        {isExternaLink ? (
+          <a
+            href={isExternaLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex flex-row gap-1 items-center hover:text-[#58a6ff] transition-colors duration-200"
+          >
+            {value}
+            <ExternalLink size={15} color="#58a6ff" />
+          </a>
+        ) : (
+          value
+        )}
+      </span>
+    </motion.div>
   )
 };
 

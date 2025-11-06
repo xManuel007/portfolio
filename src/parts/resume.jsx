@@ -6,6 +6,35 @@ import InfoItem from '../components/ui/into-item';
 import Card from '../components/ui/card';
 import Presentation from '../components/presentation';
 import { SkillsComponent } from '../components/skills/skills';
+import { TechAngular, TechAWS, TechAWSAmplify, TechAWSRoute53, TechAWSTextract, TechBitBucket, TechCss, TechEmailJS, TechFirebase, TechGit, TechI18next, TechJava, TechJavaSpringBoot, TechJS, TechLaravel, TechMongoDB, TechNextJS, TechNodeJS, TechPostgres, TechPython, TechReacJS, TechRoR, TechSass, TechTailwind, TechTypescript } from '../assets/technologies';
+
+const skills = {
+  'TechEmailJS': TechEmailJS,
+  'TechI18next': TechI18next,
+  'TechCss': TechCss,
+  'TechFirebase': TechFirebase,
+  'TechGit': TechGit,
+  'TechJS': TechJS,
+  'TechMongoDB': TechMongoDB,
+  'TechNextJS': TechNextJS,
+  'TechNodeJS': TechNodeJS,
+  'TechPostgres': TechPostgres,
+  'TechPython': TechPython,
+  'TechReacJS': TechReacJS,
+  'TechRoR': TechRoR,
+  'TechSass': TechSass,
+  'TechTailwind': TechTailwind,
+  'TechTypescript': TechTypescript,
+  'TechLaravel': TechLaravel,
+  'TechBitBucket': TechBitBucket,
+  'TechAngular': TechAngular,
+  'TechAWS': TechAWS,
+  'TechAWSAmplify': TechAWSAmplify,
+  'TechAWSRoute53': TechAWSRoute53,
+  'TechAWSTextract': TechAWSTextract,
+  'TechJava': TechJava,
+  'TechSpringBoot': TechJavaSpringBoot
+}
 
 const Resume = () => {
   const today = new Date();
@@ -50,30 +79,31 @@ const Resume = () => {
         </div>
       </div>
 
-      <div className='flex flex-col p-4 w-full items-center'>
-        <div className='text-white font-bold text-xl mb-4'>MY SKILLS</div>
-        <div className='grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-x-40'>
-          <SkillsComponent/>
-          {/* <PercentageCircle percent={90} skill={'Git'} />
-          <PercentageCircle percent={90} skill={'Github'} />
-          <PercentageCircle percent={90} skill={'Bitbucket'} />
-          <PercentageCircle percent={70} skill={'JavaScript'} />
-          <PercentageCircle percent={60} skill={'TypeScript'} />
-          <PercentageCircle percent={80} skill={'React JS'} />
-          <PercentageCircle percent={80} skill={'Next JS'} />
-          <PercentageCircle percent={80} skill={'Angular'} />
-          <PercentageCircle percent={80} skill={'Laravel'} />
-          <PercentageCircle percent={80} skill={'AWS'} />
-          <PercentageCircle percent={80} skill={'NodeJs'} />
-          <PercentageCircle percent={80} skill={'NestJs'} />
-          <PercentageCircle percent={80} skill={'Astro'} />
-          <PercentageCircle percent={80} skill={'CSS'} />
-          <PercentageCircle percent={80} skill={'Tawilwind'} />
-          <PercentageCircle percent={60} skill={'Ruby On Rails'} />
-          <PercentageCircle percent={60} skill={'Python'} />
-          <PercentageCircle percent={80} skill={'DataBases'} /> */}
+      <div className="flex flex-col items-center w-full p-8">
+        <h2 className="text-white font-extrabold text-3xl mb-8 tracking-wide">
+          MY SKILLS
+        </h2>
+
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 w-full max-w-5xl">
+          {Object.entries(skills).map(([key, value]) => (
+            <div
+              key={key}
+              className="group flex items-center justify-center bg-[#0d1117] border-[#30363d] border-[0.2px] rounded-2xl p-4 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_5px_#161b22]"
+            >
+              <img
+                src={value}
+                alt={key}
+                className="h-16 w-16 object-contain transition-transform duration-300 group-hover:scale-110"
+              />
+              {/* Tooltip */}
+              <span className="absolute bottom-[-2.5rem] px-2 py-1 text-sm text-white bg-slate-700 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">
+                {key.replace('Tech', '')}
+              </span>
+            </div>
+          ))}
         </div>
       </div>
+
     </div>
   );
 }
