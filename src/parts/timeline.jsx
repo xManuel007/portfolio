@@ -7,6 +7,8 @@ import { velocityLogo } from '../assets/projectsImages/velocity'
 import { GlicorsaLogo } from '../assets/projectsImages/glicorsa'
 import { UDCLogo } from '../assets/projectsImages/udc'
 import { getElapsedTime } from '../utils/time'
+import { EplataLogo } from '../assets/projectsImages/eplata'
+import { BrightCodersLogo } from '../assets/projectsImages/brightcoders'
 
 const TimeLine = () => {
   return (
@@ -16,7 +18,34 @@ const TimeLine = () => {
         firstphrase={'TIMELINE'}
         secondphrase={'LIFE'}
       />
-
+      <TimelineContainer year={2026}>
+        <TimelineEvent
+          verb={'Started a'}
+          experience={'FullStack Dev Position'}
+          place={'Eplata Sa de CV'}
+          additional={'Remote position as a fullstack developer, working with React, Nuxt.js, TypeScript and TailwindCSS.'}
+          settings={'Public'}
+          time={getElapsedTime('2026-01-19')}
+          languages={['React', 'Nuxt.js', 'TypeScript', 'TailwindCSS']}
+          bgColorCompany={false}
+          stars='10k'
+          imageCompany={EplataLogo}
+        />
+      </TimelineContainer>
+      <TimelineContainer year={2025}>
+        <TimelineEvent
+          verb={'Resigned from a'}
+          experience={'FullStack Dev Position'}
+          place={'Logistica Multimodal Especializada'}
+          additional={'I was a little bit sad to leave this company, but I had to look for new opportunities and experiences. full office work was stressful for me, so I decided to look for a remote position.'}
+          settings={'Public'}
+          time={getElapsedTime('2025-12-12')}
+          languages={['Angular', 'Laravel', 'TypeScript', 'SCSS']}
+          bgColorCompany={false}
+          stars='10k'
+          imageCompany={LMELogo}
+        />
+      </TimelineContainer>
       <TimelineContainer year={2024}>
         <TimelineEvent
           verb={'Started a'}
@@ -25,7 +54,8 @@ const TimeLine = () => {
           additional={'Worked as a fullstack developer utilizing technologies such as Angular and Laravel.'}
           settings={'Public'}
           time={getElapsedTime('2024-06-17')}
-          languages={['HTML', 'PHP', 'TypeScript', 'SCSS']}
+          languages={['Angular', 'Laravel', 'TypeScript', 'SCSS']}
+          bgColorCompany={false}
           stars='1.2k'
           imageCompany={LMELogo}
         />
@@ -86,8 +116,9 @@ const TimeLine = () => {
           settings={'Public'}
           time={getElapsedTime('2023-06-01')}
           languages={['HTML', 'Ruby', 'JavaScript', 'SCSS']}
+          bgColorCompany={false}
           stars='2.2k'
-          imageCompany={'https://media-exp1.licdn.com/dms/image/C560BAQF3zUuvKyf2NA/company-logo_200_200/0/1656948222145?e=2147483647&v=beta&t=a6mgHbjDPoNgqo-2j9y_r2oD98XQWI-2phjxWXRxYS8'}
+          imageCompany={BrightCodersLogo}
         />
       </TimelineContainer>
 
@@ -101,8 +132,9 @@ const TimeLine = () => {
           settings={'Public'}
           time={getElapsedTime('2022-12-01')}
           languages={['HTML', 'Ruby', 'JavaScript', 'SCSS']}
+          bgColorCompany={false}
           stars='10'
-          imageCompany={'https://media-exp1.licdn.com/dms/image/C560BAQF3zUuvKyf2NA/company-logo_200_200/0/1656948222145?e=2147483647&v=beta&t=a6mgHbjDPoNgqo-2j9y_r2oD98XQWI-2phjxWXRxYS8'}
+          imageCompany={BrightCodersLogo}
         />
         <TimelineEvent
           verb={'Finished a'}
@@ -122,9 +154,10 @@ const TimeLine = () => {
           additional={'Developed a final app about dogs, lol.'}
           settings={'Public'}
           time={getElapsedTime('2022-03-01')}
+          bgColorCompany={false}
           languages={['HTML', 'JavaScript']}
           stars='3.2k'
-          imageCompany={'https://media-exp1.licdn.com/dms/image/C560BAQF3zUuvKyf2NA/company-logo_200_200/0/1656948222145?e=2147483647&v=beta&t=a6mgHbjDPoNgqo-2j9y_r2oD98XQWI-2phjxWXRxYS8'}
+          imageCompany={BrightCodersLogo}
         />
         <TimelineEvent
           verb={'Started a'}
@@ -149,8 +182,9 @@ const TimeLine = () => {
           settings={'Public'}
           time={getElapsedTime('2021-11-01')}
           languages={['HTML', 'JavaScript']}
+          bgColorCompany={false}
           stars='10.2k'
-          imageCompany={'https://media-exp1.licdn.com/dms/image/C560BAQF3zUuvKyf2NA/company-logo_200_200/0/1656948222145?e=2147483647&v=beta&t=a6mgHbjDPoNgqo-2j9y_r2oD98XQWI-2phjxWXRxYS8'}
+          imageCompany={BrightCodersLogo}
         />
       </TimelineContainer>
 
@@ -192,8 +226,6 @@ const TimeLine = () => {
           imageCompany={UDCLogo}
         />
       </TimelineContainer>
-
-
     </div>
   )
 }

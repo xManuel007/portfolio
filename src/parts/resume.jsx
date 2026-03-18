@@ -1,11 +1,9 @@
 import React from 'react';
 import TitleBody from '../components/ui/title-part';
-import PercentageCircle from '../components/ui/percentage-circle';
 import ButtonCV from '../components/button-cv'
 import InfoItem from '../components/ui/into-item';
 import Card from '../components/ui/card';
 import Presentation from '../components/presentation';
-import { SkillsComponent } from '../components/skills/skills';
 import { TechAngular, TechAWS, TechAWSAmplify, TechAWSRoute53, TechAWSTextract, TechBitBucket, TechCss, TechEmailJS, TechFirebase, TechGit, TechI18next, TechJava, TechJavaSpringBoot, TechJS, TechLaravel, TechMongoDB, TechNextJS, TechNodeJS, TechPostgres, TechPython, TechReacJS, TechRoR, TechSass, TechTailwind, TechTypescript } from '../assets/technologies';
 
 const skills = {
@@ -40,8 +38,28 @@ const Resume = () => {
   const today = new Date();
   const birth = new Date('2001-07-28');
   const startJobs = new Date('2021-11-01');
-  const Age = today.getFullYear() - birth.getFullYear();
+  const Age = calcAge(birth);
   const Experience = today.getFullYear() - startJobs.getFullYear();
+
+  function calcAge(fechaNacimiento) {
+    const hoy = new Date();
+    const cumpleanos = new Date(fechaNacimiento);
+
+    let edad = hoy.getFullYear() - cumpleanos.getFullYear();
+    const diferenciaMeses = hoy.getMonth() - cumpleanos.getMonth();
+
+    // Si el mes actual es menor al del cumple, o si es el mismo mes
+    // pero el día actual es menor al del cumple, todavía no cumple años.
+    if (
+      diferenciaMeses < 0 ||
+      (diferenciaMeses === 0 && hoy.getDate() < cumpleanos.getDate())
+    ) {
+      edad--;
+    }
+
+    return edad;
+  }
+
   return (
     <div id='home' className='bg-navy w-screen max-h-max min-h-screen flex flex-col'>
       <TitleBody
